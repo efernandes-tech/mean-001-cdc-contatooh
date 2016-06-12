@@ -7,5 +7,12 @@ var express = require('express');
 module.exports = function() {
 	// Quando chamado retorna uma instancia do modulo armazenado.
 	var app = express();
+
+	// Define variavel de ambiente (chave, valor).
+	app.set('port', 3000);
+
+	// Middleware.
+	app.use(express.static('./public'));
+
 	return app;
 }
