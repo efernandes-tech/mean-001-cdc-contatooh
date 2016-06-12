@@ -2,6 +2,8 @@
 
 // O require() carrega o modulo (armazenando uma funcao).
 var express = require('express');
+// Carrega o modulo com as rotas.
+var home = require('./app/routes/home');
 
 // Objeto disponivel implicitamente em cada modulo.
 module.exports = function() {
@@ -20,6 +22,9 @@ module.exports = function() {
 	app.set('view engine', 'ejs');
 	// Define o diretorio que contera as views.
 	app.set('views', './app/views');
+
+	// Inicia o modulo com as rotas.
+	home(app);
 
 	return app;
 }
