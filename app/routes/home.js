@@ -1,8 +1,12 @@
 // app/routes/home.js
 
-var controller = require('../controllers/home')();
+// DEPRECATED - Agora usando 'express-load'.
+// var controller = require('../controllers/home')();
 
 module.exports = function(app) {
+
+	// Carrega o controller.
+	var controller = app.controllers.home;
 
 	// Registra a rota.
 	app.get('/', controller.index);
