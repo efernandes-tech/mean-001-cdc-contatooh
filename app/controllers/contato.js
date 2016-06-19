@@ -14,5 +14,18 @@ module.exports = function() {
 		res.json(contatos);
 	};
 
+	controller.obtemContato = function(req, res) {
+		// Armazena o parametro passado pelo curinga.
+		var idContato = req.params.id;
+
+		// Busca o contato na lista de contatos.
+		var contato = contatos.filter(function(contato) {
+			return contato._id == idContato;
+		})[0];
+
+		// Retorna o contato encontrado ou retorna a msg.
+		contato ? res.json(contato) : res.status(404).send('Contato não encontrado');
+	};
+
 	return controller;
 };
