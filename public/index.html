@@ -5,13 +5,16 @@
 	<meta name="viewport" content="width=device-width">
 	<meta charset="UTF-8">
 </head>
-<body>
+<body ng-controller="ContatosController">
 	<h1>Bem-vindo ao Contatooh</h1>
 
 	<button>Novo</button>
 	<p>Contatos cadastrados: {{total}}</p>
 
 	<script src="vendor/angular/angular.js"></script>
+	<!-- Importando o módulo. -->
 	<script src="js/main.js"></script>
+	<!-- Importando os controllers. -->
+	<script src="js/controllers/ContatosController.js"></script>
 </body>
 </html>
