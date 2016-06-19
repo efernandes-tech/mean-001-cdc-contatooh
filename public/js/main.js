@@ -2,4 +2,20 @@
 
 // O objeto 'angular' é disponibilizado globalmente.
 // Assim é possivel criar o modulo passando um array com as dependencias.
-angular.module('contatooh', ['ngRoute']);
+angular.module('contatooh', ['ngRoute'])
+
+	.config(function($routeProvider) {
+
+		// Funcao do ngRoute que define o template e o controller para a rota.
+		$routeProvider.when('/contatos', {
+			templateUrl: 'partials/contatos.html',
+			controller: 'ContatosController'
+		});
+
+		// Rota que recebe um curinga.
+		$routeProvider.when('/contato/:contatoId', {
+			templateUrl: 'partials/contato.html',
+			controller: 'ContatoController'
+		});
+
+	});
