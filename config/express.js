@@ -8,6 +8,7 @@ var express = require('express');
 
 // Carrega o modulo que carrega as dependencias.
 var load = require('express-load');
+var bodyParser = require('body-parser');
 
 // Objeto disponivel implicitamente em cada modulo.
 module.exports = function() {
@@ -17,8 +18,13 @@ module.exports = function() {
 	// Define variavel de ambiente (chave, valor).
 	app.set('port', 3000);
 
-	// Middleware.
+	// Middlewares.
 	app.use(express.static('./public'));
+
+	// Middlewares 'body-parser' e 'method-override'.
+	app.use(bodyParser.urlencoded({extended: true}));
+	app.use(bodyParser.json());
+	app.use(require('method-override')());
 
 	// Configuracao do template.
 
