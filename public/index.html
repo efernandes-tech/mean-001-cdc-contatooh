@@ -5,14 +5,11 @@
 	<meta name="viewport" content="width=device-width">
 	<meta charset="UTF-8">
 </head>
-<body ng-controller="ContatosController">
-	<h1>Bem-vindo ao Contatooh</h1>
-
-	<!-- Diretiva para o evento de click. -->
-	<button ng-click="incrementa()">Novo</button>
-	<p>Contatos cadastrados: {{total}}</p>
-
+<body>
+	<div ng-view></div>
 	<script src="vendor/angular/angular.js"></script>
+	<!-- Importando o sistema de rotas do angular. -->
+	<script src="vendor/angular-route/angular-route.js"></script>
 	<!-- Importando o módulo. -->
 	<script src="js/main.js"></script>
 	<!-- Importando os controllers. -->
