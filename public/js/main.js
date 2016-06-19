@@ -6,6 +6,9 @@ angular.module('contatooh', ['ngRoute'])
 
 	.config(function($routeProvider) {
 
+		// Redireciona caso a rota acessada não exista.
+		$routeProvider.otherwise({redirectTo: '/contatos'});
+
 		// Funcao do ngRoute que define o template e o controller para a rota.
 		$routeProvider.when('/contatos', {
 			templateUrl: 'partials/contatos.html',
