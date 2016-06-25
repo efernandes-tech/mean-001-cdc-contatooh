@@ -19,12 +19,13 @@
 			<th>E-MAIL</th>
 			<th class="text-center">Ação</th>
 		</tr>
-		<tr>
+		<!-- O "contatos" é a lista que esta sendo percorrida. -->
+		<tr ng-repeat="contato in contatos">
 			<td>
-				<a>Contato</a>
+				<a>{{contato.nome}}</a>
 			</td>
 			<td>
-				contato@empresa.com.br
+				{{contato.email}}
 			</td>
 			<td class="text-center">
 				<button class="btn btn-warning">
