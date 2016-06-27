@@ -4,13 +4,13 @@
 angular.module('contatooh').controller('ContatosController', function($scope, $http) {
 	// Iniciando as propriedades que serao utilizadas pela view.
 	$scope.contatos = [];
-	$scope.total = 0;
+	// $scope.total = 0;
 	$scope.filtro = '';
 
 	// Funcao chamada por diretivas.
-	$scope.incrementa = function() {
-		$scope.total++;
-	};
+	// $scope.incrementa = function() {
+	// 	$scope.total++;
+	// };
 
 	// O '$http' e diferente do '$.ajax()' do jQuery, ele retorna uma 'promise'.
 	// A 'promise' (promessa) e um objeto que fornecera um resultado futuro.
