@@ -1,14 +1,14 @@
 // public/js/controllers/ContatosController.js
 
 // Criando o controller passando as dependencias.
-angular.module('contatooh').controller('ContatosController', function($scope, $resource) {
+angular.module('contatooh').controller('ContatosController', function($scope, Contato) {
 	// Iniciando as propriedades que serao utilizadas pela view.
 	$scope.contatos = [];
 	$scope.filtro = '';
 	$scope.mensagem = {texto: ''};
 
 	// O '$resource' um objeto com funcoes proprias para REST.
-	var Contato = $resource('/contatos/:id');
+	// var Contato = $resource('/contatos/:id');
 
 	function buscaContatos() {
 		// Realiza uma requisicao GET por baixo dos panos.
