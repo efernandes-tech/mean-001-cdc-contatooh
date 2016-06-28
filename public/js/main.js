@@ -21,4 +21,10 @@ angular.module('contatooh', ['ngRoute', 'ngResource'])
 			controller: 'ContatoController'
 		});
 
+		// Rota aux.
+		$routeProvider.when('/contato', {
+			templateUrl: 'partials/contato.html',
+			controller: 'ContatoController'
+		});
+
 	});
