@@ -1,10 +1,10 @@
 // public/js/controllers/ContatoController.js
 
-angular.module('contatooh').controller('ContatoController', function($scope, $routeParams, $resource) {
-		console.log($routeParams.contatoId);
+angular.module('contatooh').controller('ContatoController', function($scope, $routeParams, Contato) {
+		// console.log($routeParams.contatoId);
 
 		// Aqui continua no plura, e a rota no lado do servidor.
-		var Contato = $resource('/contatos/:id');
+		// var Contato = $resource('/contatos/:id');
 
 		if ($routeParams.contatoId) {
 			Contato.get(
