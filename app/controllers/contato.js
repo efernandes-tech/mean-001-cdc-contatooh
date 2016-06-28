@@ -39,5 +39,9 @@ module.exports = function() {
 		res.send(204).end();
 	};
 
+	controller.salvaContato = function() {
+		console.log('');
+	};
+
 	return controller;
 };
