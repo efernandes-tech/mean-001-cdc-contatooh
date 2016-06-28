@@ -11,9 +11,12 @@
 <body class="container">
 	<div ng-view></div>
 	<script src="vendor/angular/angular.js"></script>
-	<!-- Importando o sistema de rotas do angular. -->
+	<!-- Importando os plugins do angular. -->
+	<!-- Sistema de rotas. -->
 	<script src="vendor/angular-route/angular-route.js"></script>
-	<!-- Importando o módulo. -->
+	<!-- Sistema para consumir REST Endpoints, mais alto nivel que o '$http'. -->
+	<script src="vendor/angular-route/angular-resource.js"></script>
+	<!-- Importando o módulo da aplicacao. -->
 	<script src="js/main.js"></script>
 	<!-- Importando os controllers. -->
 	<script src="js/controllers/ContatosController.js"></script>

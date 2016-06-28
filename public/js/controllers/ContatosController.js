@@ -1,7 +1,8 @@
 // public/js/controllers/ContatosController.js
 
 // Criando o controller passando as dependencias.
-angular.module('contatooh').controller('ContatosController', function($scope, $http) {
+angular.module('contatooh').controller('ContatosController', function($scope, $resource) {
+// angular.module('contatooh').controller('ContatosController', function($scope, $http) {
 	// Iniciando as propriedades que serao utilizadas pela view.
 	$scope.contatos = [];
 	// $scope.total = 0;

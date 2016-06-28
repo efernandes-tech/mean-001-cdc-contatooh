@@ -2,7 +2,7 @@
 
 // O objeto 'angular' é disponibilizado globalmente.
 // Assim é possivel criar o modulo passando um array com as dependencias.
-angular.module('contatooh', ['ngRoute'])
+angular.module('contatooh', ['ngRoute', 'ngResource'])
 
 	.config(function($routeProvider) {
 
