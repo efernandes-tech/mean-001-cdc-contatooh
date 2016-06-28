@@ -9,7 +9,22 @@ angular.module('contatooh').controller('ContatosController', function($scope, $r
 	// O '$resource' um objeto com funcoes proprias para REST.
 	var Contato = $resource('/contatos');
 
-	// Realiza uma requisicao GET por baixo dos panos.
+	function buscaContatos() {
+		// Realiza uma requisicao GET por baixo dos panos.
+		Contato.query(
+			function(contatos) {
+				$scope.contatos = contatos;
+			},
+			function(erro) {
+				console.log('Não foi possível obter a lista de contatos');
+				console.log(erro);
+			}
+		);
+	}
+
+	buscaContatos();
+
+	/*// Realiza uma requisicao GET por baixo dos panos.
 	var promise = Contato.query().$promise;
 
 	promise
@@ -19,12 +34,12 @@ angular.module('contatooh').controller('ContatosController', function($scope, $r
 		.catch(function(erro) {
 			console.log('Não foi possível obter a lista de contatos');
 			console.log(erro);
-		});
+		});*/
 
-	// O '$http' e diferente do '$.ajax()' do jQuery, ele retorna uma 'promise'.
+	/*// O '$http' e diferente do '$.ajax()' do jQuery, ele retorna uma 'promise'.
 	// A 'promise' (promessa) e um objeto que fornecera um resultado futuro.
 	// Dessa forma vc evita o 'Callback HELL' e a 'Pyramid Of Doom'.
-	/*$http.get('/contatos')
+	$http.get('/contatos')
 		// Executado quando 'fulfilled'.
 		.success(function(data) {
 			$scope.contatos = data;
@@ -35,10 +50,10 @@ angular.module('contatooh').controller('ContatosController', function($scope, $r
 			console.log(statusText);
 		});*/
 
-	// $scope.total = 0;
+	/*$scope.total = 0;
 
-	// Funcao chamada por diretivas.
-	// $scope.incrementa = function() {
-	// 	$scope.total++;
-	// };
+	Funcao chamada por diretivas.
+	$scope.incrementa = function() {
+		$scope.total++;
+	};*/
 });
