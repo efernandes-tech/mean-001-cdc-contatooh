@@ -7,7 +7,7 @@ angular.module('contatooh').controller('ContatosController', function($scope, $r
 	$scope.filtro = '';
 
 	// O '$resource' um objeto com funcoes proprias para REST.
-	var Contato = $resource('/contatos');
+	var Contato = $resource('/contatos/:id');
 
 	function buscaContatos() {
 		// Realiza uma requisicao GET por baixo dos panos.
@@ -22,6 +22,14 @@ angular.module('contatooh').controller('ContatosController', function($scope, $r
 		);
 	}
 
+	// Definindo o que e executado na inicializacao do controller.
+	$scope.init = function() {
+		buscaContatos();
+		// ...
+	};
+
+	$scope.init();
+
 	$scope.remove = function(contato) {
 		Contato.delete(
 			{id: contato._id},
@@ -30,16 +38,8 @@ angular.module('contatooh').controller('ContatosController', function($scope, $r
 				console.log('Não foi possível remover o contato.');
 				console.log(erro);
 			}
-		)
+		);
 	};
-
-	// Definindo o que e executado na inicializacao do controller.
-	$scope.init = function() {
-		buscaContatos();
-		// ...
-	};
-
-	$scope.init();
 
 	/*// Realiza uma requisicao GET por baixo dos panos.
 	var promise = Contato.query().$promise;

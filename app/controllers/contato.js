@@ -36,6 +36,7 @@ module.exports = function() {
 		contatos = contatos.filter(function(contato) {
 			return contato._id != idContato;
 		});
+
 		res.send(204).end();
 	};
 

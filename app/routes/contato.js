@@ -17,5 +17,5 @@ module.exports = function(app) {
 	// app.delete('/contatos/:id', controller.removeContato);
 	app.route('/contatos/:id')
 		.get(controller.obtemContato)
-		.post(controller.removeContato);
+		.delete(controller.removeContato);
 };
