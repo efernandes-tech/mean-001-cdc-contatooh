@@ -5,6 +5,7 @@ angular.module('contatooh').controller('ContatosController', function($scope, $r
 	// Iniciando as propriedades que serao utilizadas pela view.
 	$scope.contatos = [];
 	$scope.filtro = '';
+	$scope.mensagem = {texto: ''};
 
 	// O '$resource' um objeto com funcoes proprias para REST.
 	var Contato = $resource('/contatos/:id');
@@ -14,10 +15,13 @@ angular.module('contatooh').controller('ContatosController', function($scope, $r
 		Contato.query(
 			function(contatos) {
 				$scope.contatos = contatos;
+				$scope.mensagem = {};
 			},
 			function(erro) {
-				console.log('Não foi possível obter a lista de contatos');
 				console.log(erro);
+				$scope.mensagem =  {
+					texto: 'Não foi possível obter a lista de contatos.'
+				};
 			}
 		);
 	}
@@ -35,7 +39,9 @@ angular.module('contatooh').controller('ContatosController', function($scope, $r
 			{id: contato._id},
 			buscaContatos,
 			function(erro) {
-				console.log('Não foi possível remover o contato.');
+				$scope.mensagem = {
+					texto: 'Não foi possível remover o contato.'
+				};
 				console.log(erro);
 			}
 		);

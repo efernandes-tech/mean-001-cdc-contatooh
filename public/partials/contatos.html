@@ -6,13 +6,22 @@
 		Bem-vindo ao Contatooh
 	</h1>
 </div>
+<!-- Exibindo avisos para o usuario. -->
+<p ng-show="mensagem.texto">
+	{{mensagem.texto}}
+</p>
 <!-- Diretiva para o evento de click. -->
 <button ng-click="incrementa()" class="btn btn-primary">
 	Novo
 </button>
 <input ng-model="filtro" type="search" placeholder="parte do nome">
 <!-- <p>Contatos cadastrados: {{total}}</p> -->
-<p>Contatos cadastrados: {{contatos.lenght}}</p>
+<p ng-show="contatos.length">
+	Contatos cadastrados: {{contatos.length}}
+</p>
+<p class="text-info" ng-hide="contatos.length">
+	Não há contatos cadastrados.
+</p>
 <div class="table table-responsive">
 	<!-- A classe "table-hover" destaca linhas, com o mouse. -->
 	<table class="table table-hover">
