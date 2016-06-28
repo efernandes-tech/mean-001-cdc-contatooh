@@ -11,9 +11,9 @@
 	{{mensagem.texto}}
 </p>
 <!-- Diretiva para o evento de click. -->
-<button ng-click="incrementa()" class="btn btn-primary">
-	Novo
-</button>
+<a ng-href="#/contato" class="btn btn-primary">
+	Novo Contato
+</a>
 <input ng-model="filtro" type="search" placeholder="parte do nome">
 <!-- <p>Contatos cadastrados: {{total}}</p> -->
 <p ng-show="contatos.length">
@@ -33,7 +33,7 @@
 		<!-- O "contatos" é a lista que esta sendo percorrida. -->
 		<tr ng-repeat="contato in contatos | filter: filtro">
 			<td>
-				<a>{{contato.nome}}</a>
+				<a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
 			</td>
 			<td>
 				{{contato.email}}
