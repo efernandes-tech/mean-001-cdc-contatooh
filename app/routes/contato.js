@@ -9,4 +9,6 @@ module.exports = function(app) {
 	app.get('/contatos', controller.listaContatos);
 	// Registra a rota usando um curinga.
 	app.get('/contatos/:id', controller.obtemContato);
+
+	app.delete('/contatos/:id', controller.removeContato);
 };
