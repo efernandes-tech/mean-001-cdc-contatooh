@@ -35,10 +35,12 @@ module.exports = function() {
 
 		console.log('API: removeContato: ' + idContato);
 
+		// Busca e remove o contato.
 		contatos = contatos.filter(function(contato) {
 			return contato._id != idContato;
 		});
 
+		// Status code '204' (No Content) = operacao ocorreu normalmente.
 		res.send(204).end();
 	};
 
