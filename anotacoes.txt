@@ -1,0 +1,212 @@
+1.1 mean stack
+	- MongoDB – Banco de dados NoSQL, armazena dados em um formato muito similar a JSON, e boa parte da responsabilidade das regras de validação ficam a cargo do desenvolvedor.
+	- Express – Framework light-weight que organiza a aplicação, no lado do servidor, no padrão MVC.
+	- AngularJS – Framework MVC no lado do cliente, um high opinionted framework voltado a SPA, desenvolvido pelo Google que simplifica bastante o desenvolvimento.
+	- Node.js – Plataforma para aplicações javascript no lado do servidor, usa o gerenciador de pacotes npm e é o core de aplicações MEAN.
+1.5 instalação do node.js
+	- Onde baixar:
+		http://nodejs.org/
+	- Verificar a versão no terminal:
+		node -v
+2.1 express e os seu papel
+	- Middlewares – E uma função, ou uma pilha de funções, que lidam com requisições.
+2.2 estrutura do projeto em package.json
+	- Estrutura básica de diretórios:
+		contatooh
+    		app
+        		controllers - Controladores chamados pelas rotas da aplicação.
+        		models - Models que representam o domínio do problema.
+        		routes - Rotas da aplicação.
+        		views - Views do template engine.
+    		config - Configurações do Express, banco de dados, etc.
+    		public - Todos os arquivos acessíveis diretamente pelo navegador.
+	- O arquivo "package.json" contem informações sobre o projeto e as dependências. Pode ser criado com o comando:
+		npm init
+2.3 instalando o express atraves do npm
+	- Para instalar o Express com o NPM, usa-se o "--save" para adicionar a dependência no "package.json", o "@" especifica a versão e as dependências são baixadas para o diretório "node_modules".
+		npm install express@4.8 --save 
+2.4 criando o modulo de configuracao do express
+	- Centralizar as configurações do Express em um unico arquivo:
+ 		config/express.js
+	- Arquivo que o Node usa para subir o servidor e:
+		server.js
+	- Para rodar o servidor, acessar o diretorio que contem o arquivo "server.js" e executar o comando:
+		node server
+2.5 entendendo variaveis de ambiente e middlewares
+	- Variaveis de ambiente sao usadas para inicializar configurações padrões de Express.
+	- O middleware express.static no "config/express.js" torna acessivel pelo navegador arquivos estaticos.
+	- Agora pode ser criado o arquivo "index.html" dentro da pasta "public", rodar o servidor com "node server" e acessar o endereco "localhost:3000":
+2.6 view e template engine
+	- Express suporta uma grande variedade de templates. O que tem uma sintaxe mais proxima do HTML é o EJS:
+		http://www.embeddedjs.com/
+	- Instalar com o NPM:
+		npm install ejs@0.8 --save
+	- Configuração do template em "config/express.js".
+	- Criando o arquivo "index.ejs" do template, dentro da pasta "app/views" (<%=nome %> exibe parametro).
+2.7 configurando rotas
+	- Inicializando o modulo com as rotas no arquivo de configuração do Express "config/express.js".
+	- Registra uma rota em "app/routes/home.js".
+2.8 criando controllers
+	- Controller criado em "app/controller/home.js".
+	- Usando o "NODEMON" vc não precisa reiniciar o servidor a cada alteração ('-g' instala globalmente):
+		npm install nodemon -g
+		nodemon server.js
+2.9 carregando dependencias com express-load
+	- Com o aumento no numero de arquivos, controlar as dependecias com "require()" se torna complexo, por isso o ideal é usar o "Express-Load". Para instalar:
+		npm install express-load@1.1 --save
+	- Carregando e implementando o Express-Load no arquivo de configuração "config/express.js".
+	- Lembre-se de modificar os arquivos de rotas.
+2.10 listando contatos
+	- Criando a rota "app/routes/contato.js".
+	- Criando o controller que retorna a lista em JSON (futuramente a "var contatos" sera substituida pelo MongoDB).
+2.12 retornando contato da lista
+	- Registrando rota usando um curinga (:id), para passar paramentro, em "app/routes/contato.js" e pegar o parametro no controller.
+consideracao sobre os verbos delete e put
+	- Nem todos os navegadores, ou redes, suportam os verbos DELETE e PUT, a solução é usar o POST, adicionando no Header o verbo desejado, mas o servidor precisa estar preparado para receber. No Express são necessarios 2 middleware, o "Method-override" e o "body-parser". Instalando e configurando:
+		npm install body-parser@1.6 method-override@2.1 --save
+3.1 instalacao
+	- Bower é um modulo do NPM. Instalando globalmente com '-g' e testando:
+		npm install -g bower@1.3
+		bower
+3.2 bower.json e nossas dependencias
+	- Para criar o arquivo que lista as denpendecias, usa-se:
+		bower init
+3.3 baixando dependencias front-end
+	- Para instalar dependencias usa-se "#" para determinar a versão e "--save" para adicionar como dependencia no "bower.json". Acessar a pasta do projeto e executar:
+		bower install angular#1.3 --save
+3.4 alterando a pasta destino com .bowerrc
+	- Por padrao o Bower baixa as dependencias para a pasta "bower_components" dentro da raiz. Para alterar vc deve remover esta pasta criada, criar o arquivo ".bowerrc" na raiz do projeto com o caminho desejado para armazenar as dependecias e executar o comando para reinstalar dependecias ja listadas no "bower.json":
+		rm -r bower_components
+		bower install
+3.5 outros comandos
+	- Busca as bibliotecas registradas para download:
+		bower search angular
+	- Informa as versões disponiveis de determinda biblioteca:
+		bower info angular
+	- Remove a pasta da biblioteca e altera o "bower.json":
+		bower uninstall angular --save
+	- Manter os pacotes baixados em cache, para no funturo não depender da internet, caso precise baixa-lo novamente:
+		bower install angular#1.3 --save --offline
+4.4 preparando o ambiente
+	- Renomear arquivos para não gerar conflitos, pois a parte dinâmica das views ficara a cargo do AngularJS:
+		app/views/index.ejs			=>	app/views/index.ejs.old
+		app/controllers/home.ejs	=>	app/controllers/home.ejs.old
+		app/routes/home.ejs			=>	app/routes/home.ejs.old 
+	- Criar arquivo basico "/public/index.html".
+4.5 habilitando o angularjs em nossa pagina
+	- Importando o AngularJS e definindo o bloco que ele gerenciara com a diretiva "ng-app", passando o nome do módulo que ele ira utilizar, desta forma evita-se conflitos com outros módulos/frameworks.
+4.6 nosso primeiro modulo com angularjs
+	- Criar e importar o módulo em "public/js/main.js".
+4.7 angular expression (ae)
+	- Usando "{{ ...}}", tudo que esta dentro será buscado pelo AngularJS no controller.
+4.8 nosso primeiro controller
+	- Criar cada controller em um arquivo separado (Boa prática). Criando, importando e definindo o bloco do controller com a diretiva "ng-controller".
+4.9 $scope: a cola entre controller e view
+	- $scope é um Plain Old Javascript Object (POJO), que permite a inclusão dinamica de propriedades. O AngularJS usa a injeção de dependencias e as AE para transformar o $scope em uma cola entre o controller e a view.
+4.11 executando acoes no controller atraves de diretiva
+	- Diretiva "ng-click" esta associada ao evento de click do mouse, ela chama a função do controller.
+4.12 a magica do data binding
+	- O tipo apresentado até agora foi o "one-way data binding", no qual a view só pode ler o model, mas não grava-lo.
+4.14 o modulo ngRoute
+	- ngRoute é o sistema de rotas do AngularJS. Instalar e importa-lo:
+		bower install angular-route#1.3 --save
+	- Com o uso de rotas, é necessario remover a diretiva "ng-controller" e aplicar a diretiva "ng-view", desta forma podemos usar controllers diferentes chamando views parciais próprias.
+4.15 criando views parciais
+	- Criar as views parciais dentro do diretorio "public/partials".
+4.16 configurando rotas com $routeProvider
+	- Configurando uma rota em "public/js/main.js".
+	- Para acessar a rota pelo navegador usa-se o # (hash), caso contrario vc acessaria a rota do servidor:
+		http://localhost:3000/#/contatos (pq "/public" contem "index.html")	http://localhost:3000/index.html#/contatos
+4.17 o objeto $routeParams
+	- Criando e importando o controller que usa o objeto injetado "$routeParams" para pegar o parametro curinga.
+adicionando rota padrao
+	- Caso seja acessado uma rota que não exista, o "$routeProvider.otherwise" redireciona para uma rota conhecida.
+4.18 bootstrap: visual profissional em nossas views
+baixando o bootstrap atraves do bower
+	- Comando para baixar o Bootstrap, e baixara o jQuery como dependência:
+		bower install bootstrap --save
+adicionando o bootstrap em nossas paginas
+	- Importe o Bootstrap e adicione a classe "container" ao "body".
+	- Adicionando classes do Bootstrap a partial "contatos.html".
+4.19 a diretiva ng-repeat
+	- A diretiva "ng-repeat" percorre um array e da acesso aos elementos.
+4.20 a diretiva ng-model e filtragem da lista
+	- Não pode simplesmente usar uma AE {{ ... }}  pois ela é "one-way  data binding" ( somente leitura). É necessario usar "ng-model" que é um "two-way data binding" (leitura e escrita).
+5.4 obtendo contatos com $http
+	- O "$http" e diferente do "$.ajax()" do jQuery, ele retorna uma "promise". A "promise" (promessa) e um objeto que fornecera um resultado futuro. Dessa forma vc evita o "Callback HELL" e a "Pyramid Of Doom".
+5.5 o modulo ngresource: trabalhando em alto nivel
+	- Instalar:
+		bower install angular-resource#1.3 --save
+	- E um sistema para consumir REST EndPoints, mais alto nivel que o "$http".
+5.6 consumindo rest endpoints com $resource
+	- O "$resource" e um objeto com funcoes proprias para REST.
+6.3 instalação do mongodb
+	- Link para instalação da versão 3.2.7 (Só consegui instalar o 32-bit, mas ele tem limite de tamanho de 2GB para o banco de dados).
+		https://www.mongodb.com/download-center?jmp=nav
+	- Link com as instruções de instalação:
+		https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ 
+	- Comando obrigatorio apos instalar (cria pastas default):
+		md \data\db
+	- Rodando o MongoDB pelo shell do Windows:
+		- Na primeira vez:
+			"C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe" --journal --storageEngine=mmapv1c
+		- Depois sempre usar este para conectar:
+			"C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe"
+		- Ou este:
+			mongod.exe
+		- Se vc colocar a pasta "C:\Program Files\MongoDB\Server\3.2\bin\" nas variaveis de ambiente.
+6.4 utilizando o mongo shell
+	- Para interagir com as instâncias do mongo use o comando:
+		mongo --port 27017 --host localhost
+	- Ou use apenas este abaixo, pq ele usa as cofigs default do comando anterior:
+		mongo
+6.7 criando o banco da aplicacao
+	- Listar todos os bancos:
+		show dbs
+	- Criar/acessar banco:
+		use contatooh
+	- Mostrar banco atual:
+		db
+6.8 collections e insercao de documentos
+	- Criar objeto JS:
+		var contato = { "nome" : "Éderson" }
+	- Imprimir objeto JS no console:
+		contato
+	- Incluir objeto JS emuma collection (tabela para o mongodb):
+		db.contatos.insert(contato)
+	- Listar collections:
+		show collections
+6.9 buscando documentos
+	- Exibir/buscar documentos salvas:
+		db.contatos.find();
+	- Apagar o banco de dados (cuidado pq isto é irreversível):
+		db.dropDatabase()
+6.10 o objeto cursor
+	- Armazenar o resultado de "find" (retorna um cursor) em uma var e listar todos 1 vez:
+		var contatos = db.contatos.find()
+		contatos
+	- Listar 1 de cada vez com o "next":
+		var contatos = db.contatos.find()
+		contatos.next()
+6.11 buscando com criterio
+	- Buscar apenas um documento com o "findOne" (retorna um objeto):
+		var contatos = db.contatos.findOne()
+		contatos
+	- Bascar com criterio (where no mongodb):
+		var criterio = {"email":"c2@c2.com.br"}
+		var contatos = db.contatos.find(criterio)
+		contatos
+	- Buscar usando expressoes regulares (like do sql):
+		var crit = {"nome":/tato/i}
+		var cont = db.contatos.find(crit)
+	- Quantos contatos cadastrados (aceita criterio):
+		db.contatos.count()
+	- Com criterio:
+		db.contatos.count({"nome":/tato/i})
+	- Buscar por um criterio dentro de uma lista no objeto BSON:
+		var contatoComEmails = { "nome" : "teste", "emails" : ["email1@e1.com.br", "email2@e2.com.br"] }
+		db.contatos.insert(contatoComEmails)
+		db.contatos.find({"emails":"email2@e2.com.br"})
+
+6.12 query selectors
+Pg154
