@@ -1,3 +1,6 @@
+- npm update
+
+
 1.1 mean stack
 	- MongoDB – Banco de dados NoSQL, armazena dados em um formato muito similar a JSON, e boa parte da responsabilidade das regras de validação ficam a cargo do desenvolvedor.
 	- Express – Framework light-weight que organiza a aplicação, no lado do servidor, no padrão MVC.
@@ -8,8 +11,8 @@
 		http://nodejs.org/
 	- Verificar a versão no terminal:
 		node -v
-2.1 express e os seu papel
-	- Middlewares – E uma função, ou uma pilha de funções, que lidam com requisições.
+2.1 express e o seu papel
+	- Middlewares – É uma função, ou uma pilha de funções, que lidam com requisições.
 2.2 estrutura do projeto em package.json
 	- Estrutura básica de diretórios:
 		contatooh
