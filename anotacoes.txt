@@ -1,5 +1,14 @@
-- npm update
+﻿Passos Para Inicializar:
 
+1 - Baixar o node.
+2 - Acessar a pasta do projeto com o GitShell.
+3 - Executar "npm update".
+4 - Executar "bower update".
+5 - Instalar e executar o NodeMon "npm install nodemon -g" e "nodemon server.js" (atenção as permissões de adm da maquina).
+6 - Se não rodar o NodeMon, use o "node server".
+7 - Acesse a url: "http:\\localhost:3000".
+
+Anotacoes Livro:
 
 1.1 mean stack
 	- MongoDB – Banco de dados NoSQL, armazena dados em um formato muito similar a JSON, e boa parte da responsabilidade das regras de validação ficam a cargo do desenvolvedor.
