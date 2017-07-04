@@ -152,6 +152,9 @@ adicionando o bootstrap em nossas paginas
 	- E um sistema para consumir REST EndPoints, mais alto nivel que o "$http".
 5.6 consumindo rest endpoints com $resource
 	- O "$resource" e um objeto com funcoes proprias para REST.
+
+
+
 6.3 instalação do mongodb
 	- Link para instalação da versão 3.2.7 (Só consegui instalar o 32-bit, mas ele tem limite de tamanho de 2GB para o banco de dados).
 		https://www.mongodb.com/download-center?jmp=nav
@@ -219,6 +222,17 @@ adicionando o bootstrap em nossas paginas
 		var contatoComEmails = { "nome" : "teste", "emails" : ["email1@e1.com.br", "email2@e2.com.br"] }
 		db.contatos.insert(contatoComEmails)
 		db.contatos.find({"emails":"email2@e2.com.br"})
-
 6.12 query selectors
-Pg154
+	- O find por padrão pesquisa com "AND", para usar o "OR" vc precisa usar um query selector ($or ou $ne):
+		var contatoComEmails = { "nome" : "teste", "emails" : ["email1@e1.com.br", "email2@e2.com.br"] }
+		db.contatos.insert(contatoComEmails)
+		db.contatos.find({
+			"$or" : [
+				{"emails":"email2@e2.com.br"},
+				{"nome":"teste"},
+			]
+		})
+	- Mais operadores:
+		"https://docs.mongodb.com/manual/reference/operator/query/"
+6.13 indexando documentos
+PG155
