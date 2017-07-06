@@ -8,6 +8,16 @@
 6 - Se não rodar o NodeMon, use o "node server".
 7 - Acesse a url: "http:\\localhost:3000".
 
+MongoDB
+- Baixar e instalar.
+- Executar comandos no prompt:
+	md \data\db
+	"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
+- Comando para inicializar:
+	"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"
+- Acessar em outro prompt (ele inicializado no primeiro):
+	mongo --port 27017 --host localhost
+
 Anotacoes Livro:
 
 1.1 mean stack
