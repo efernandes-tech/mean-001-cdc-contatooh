@@ -152,9 +152,6 @@ adicionando o bootstrap em nossas paginas
 	- E um sistema para consumir REST EndPoints, mais alto nivel que o "$http".
 5.6 consumindo rest endpoints com $resource
 	- O "$resource" e um objeto com funcoes proprias para REST.
-
-
-
 6.3 instalação do mongodb
 	- Link para instalação da versão 3.2.7 (Só consegui instalar o 32-bit, mas ele tem limite de tamanho de 2GB para o banco de dados).
 		https://www.mongodb.com/download-center?jmp=nav
@@ -235,4 +232,47 @@ adicionando o bootstrap em nossas paginas
 	- Mais operadores:
 		"https://docs.mongodb.com/manual/reference/operator/query/"
 6.13 indexando documentos
-PG155
+	- Utilizar indeces para aumentar a performance
+		ensureIndex / getIndexes / dropIndex
+		 http://docs.mongodb.org/manual/reference/method/db.collection.ensureIndex/
+6.14 retornando documentos parciais
+	- Retorna apenas a chave nome, pq por padrao recebe tudo (nome e id).
+		 db.contatos.find({}, { "nome" : 1, _id : 0 })
+6.15 removendo documentos
+	- Removendo de acordo com um criterio:
+		db.contatos.remove({ "email" : "cont1@empresa.com.br" })
+	- Apaga tudo da coleção permanentemente
+		db.contatos.remove()
+6.16 atualizando documentos
+	- Atualizando de acordo com um criterio, e usando update, mas cuidado pq ele faz um replace do documento
+		var criterio = { "email" : "cont3@empresa.com.br" }
+		var contato = db.contatos.findOne(criterio);
+		contato.nome = "Nome Alterado"
+		db.contatos.update(criterio, contato)
+6.17 realizando upserts
+	- Se nao encotra para atualizar, eh criado um novo
+		var contato4 = { "nome" : "Contato 4 mongo", "email" : "cont4@empresa.com.br" }
+		db.contatos.update({ "nome" : /4/ }, contato4, true);
+6.18 $set: modificador de atualizacao
+	- Atualizacao mais precisa, se alterar todo o documento
+		db.contatos.update(
+			{ "email" : "cont4@empresa.com.br"},
+			{
+				"$set" :
+				{
+					"nome" : "Mais uma alteração"
+				}
+			}
+		)
+6.19 documentos embutidos (embedded documents)
+	- Faz o mongodb injetar o documento dentro do outro para nao ser preciso usar joins
+	- Em uma situacao de nota fiscal faz sentido pq nada existe sem a nota, mas em uma ligacao de contato com contato de emergencia, se um muda o outra nao sabe
+6.20 simulando joins no lado da aplicacao
+	- Vc grava o ObjectId de um documento dentro do outro
+	- Para buscar, é so realizar uma consulta, e depois a outra
+6.21 dbrefs: database references
+	- E uma forma de saber de qual collection um ID pertence para poder implementar as consultas de busca
+
+
+
+capitulo 7 pg 171
