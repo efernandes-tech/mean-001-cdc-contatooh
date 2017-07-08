@@ -1,7 +1,10 @@
 ﻿Passos Para Inicializar:
 
-1 - Baixar o node.
-2 - Acessar a pasta do projeto com o GitShell.
+1 - Instalar o node.
+2 - Instalar o MongoDB, entao executar comandos no prompt:
+    md \data\db
+    "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
+2 - Acessar a pasta do projeto com o prompt.
 3 - Executar "npm update".
 4 - Executar "bower update".
 5 - Instalar e executar o NodeMon "npm install nodemon -g" e "nodemon server.js" (atenção as permissões de adm da maquina).
@@ -9,10 +12,6 @@
 7 - Acesse a url: "http:\\localhost:3000".
 
 MongoDB
-- Baixar e instalar.
-- Executar comandos no prompt:
-	md \data\db
-	"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
 - Comando para inicializar:
 	"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"
 - Acessar em outro prompt (ele inicializado no primeiro):
@@ -166,7 +165,7 @@ adicionando o bootstrap em nossas paginas
 	- Link para instalação da versão 3.2.7 (Só consegui instalar o 32-bit, mas ele tem limite de tamanho de 2GB para o banco de dados).
 		https://www.mongodb.com/download-center?jmp=nav
 	- Link com as instruções de instalação:
-		https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ 
+		https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 	- Comando obrigatorio apos instalar (cria pastas default):
 		md \data\db
 	- Rodando o MongoDB pelo shell do Windows:
@@ -282,7 +281,8 @@ adicionando o bootstrap em nossas paginas
 	- Para buscar, é so realizar uma consulta, e depois a outra
 6.21 dbrefs: database references
 	- E uma forma de saber de qual collection um ID pertence para poder implementar as consultas de busca
+7.1 mongo driver
+    - Instalar o drive para conexao do express com o mongodb
+        npm install mongodb@1.4 --save
 
-
-
-capitulo 7 pg 171
+pg 172
