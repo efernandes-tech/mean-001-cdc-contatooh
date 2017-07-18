@@ -1,4 +1,6 @@
-﻿Passos Para Inicializar:
+﻿# mean-001-cdc-contatooh
+
+##### Passos Para Inicializar:
 
 1 - Instalar o node.
 2 - Instalar o MongoDB, entao executar comandos no prompt:
@@ -11,17 +13,18 @@
 6 - Se não rodar o NodeMon, use o "node server".
 7 - Acesse a url: "http:\\localhost:3000".
 
-MongoDB:
+##### MongoDB:
+
 - Comando para inicializar:
 	"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"
 - Acessar em outro prompt (ele inicializado no primeiro):
 	mongo --port 27017 --host localhost
 
-Correção de Bugs:
+##### Correção de Bugs:
+
 - https://stackoverflow.com/questions/28651028/cannot-find-module-build-release-bson-code-module-not-found-js-bson
 
-
-Anotacoes Livro:
+##### Anotacoes Livro:
 
 1.1 mean stack
 	- MongoDB – Banco de dados NoSQL, armazena dados em um formato muito similar a JSON, e boa parte da responsabilidade das regras de validação ficam a cargo do desenvolvedor.
@@ -289,4 +292,4 @@ adicionando o bootstrap em nossas paginas
     - Instalar o drive para conexao do express com o mongodb
         npm install mongodb@1.4 --save
 
-pg 172
+pg 173 - cap 7.2
