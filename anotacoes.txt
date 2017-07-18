@@ -11,11 +11,15 @@
 6 - Se não rodar o NodeMon, use o "node server".
 7 - Acesse a url: "http:\\localhost:3000".
 
-MongoDB
+MongoDB:
 - Comando para inicializar:
 	"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"
 - Acessar em outro prompt (ele inicializado no primeiro):
 	mongo --port 27017 --host localhost
+
+Correção de Bugs:
+- https://stackoverflow.com/questions/28651028/cannot-find-module-build-release-bson-code-module-not-found-js-bson
+
 
 Anotacoes Livro:
 
