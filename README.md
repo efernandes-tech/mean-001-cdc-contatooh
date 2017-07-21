@@ -291,5 +291,14 @@ adicionando o bootstrap em nossas paginas
 7.1 mongo driver
     - Instalar o drive para conexao do express com o mongodb
         npm install mongodb@1.4 --save
+7.2 esquema faz falta?
+	- O esquema fica por conta da aplicação, a integridade do dado é responsabilidade do programador.
+7.3 mongoose object-document modeler
+	- Abstração que roda em cima do driver nativo do mongodb, e que possibilita a criação de esquemas.
+		- É tipo uma analogia ao padrão ActiveRecord.
+	- Instalando o mongoose:
+		npm install mongoose@3.8 --save
+7.4 gerenciando a conexão
+	- Sera usada a função "connect", mas para trabalhar com mais de um banco/conexão, use a função "createConnection" (pg 177).
 
-pg 173 - cap 7.2
+pg 179 - cap 7.5
