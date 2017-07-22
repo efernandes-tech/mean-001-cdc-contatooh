@@ -21,7 +21,8 @@
 	<div class="form-group">
 		<label for="emergencia">Emergência</label>
 		<select id="emergencia" class="form-control"
-			ng-model="contato.emergencia">
+			ng-model="contato.emergencia"
+			ng-options="contato._id as contato.nome for contato in contatos">
 		</select>
 	</div>
 	<div>
