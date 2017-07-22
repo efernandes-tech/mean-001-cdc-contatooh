@@ -308,5 +308,7 @@ adicionando o bootstrap em nossas paginas
 	- Sera usada a função "connect", mas para trabalhar com mais de um banco/conexão, use a função "createConnection" (pg 177).
 7.5 criando esquemas
 	- O MongoDB é um banco sem esquemas, por isso o Mongoose possui o objeto Schema, para que as Models usem.
+7.11 funcoes de persistencia no model ou no documento?
+	- Utilizamos o segundo pois as funcoes de percistencia do primeiro não retornam promises.
 
 pg 179 - cap 7.5
