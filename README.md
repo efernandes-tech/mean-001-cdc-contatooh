@@ -310,5 +310,7 @@ adicionando o bootstrap em nossas paginas
 	- O MongoDB é um banco sem esquemas, por isso o Mongoose possui o objeto Schema, para que as Models usem.
 7.11 funcoes de persistencia no model ou no documento?
 	- Utilizamos o segundo pois as funcoes de percistencia do primeiro não retornam promises.
+8 autenticacao com passport
+	- Para não ter que desenvolver um servidor de autenticação e tmb armazenar senhas, vc pode usar serviços de autenticação com o do Facebook.
 
-pg 179 - cap 7.5
+pg 199 - cap 8
