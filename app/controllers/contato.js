@@ -1,73 +1,17 @@
-// app/controller/contato.js
+// app/controllers/contato.js
 
-var contatos = [
-	{_id: 1, nome: 'Contato Exemplo 1', email: 'cont1@empresa.com.br'},
-	{_id: 2, nome: 'Contato Exemplo 2', email: 'cont2@empresa.com.br'},
-	{_id: 3, nome: 'Contato Exemplo 3', email: 'cont3@empresa.com.br'},
-];
+module.exports = function(app) {
+	var Contato = app.models.contato;
 
-var ID_CONTATO_INC = 3;
-
-module.exports = function() {
 	var controller = {};
 
-	controller.listaContatos = function(req, res) {
-		// Retorna os dados no formato JSON.
-		res.json(contatos);
-	};
+	controller.listaTodos = function(req, res) {};
 
-	controller.obtemContato = function(req, res) {
-		// Armazena o parametro passado pelo curinga.
-		var idContato = req.params.id;
+	controller.obtemContato = function(req, res) {};
 
-		// Busca o contato na lista de contatos.
-		var contato = contatos.filter(function(contato) {
-			return contato._id == idContato;
-		})[0];
+	controller.removeContato = function(req, res) {};
 
-		// Retorna o contato encontrado ou retorna a msg.
-		contato ? res.json(contato) : res.status(404).send('Contato não encontrado');
-	};
-
-	controller.removeContato = function(req, res) {
-
-		var idContato = req.params.id;
-
-		console.log('API: removeContato: ' + idContato);
-
-		// Busca e remove o contato.
-		contatos = contatos.filter(function(contato) {
-			return contato._id != idContato;
-		});
-
-		// Status code '204' (No Content) = operacao ocorreu normalmente.
-		res.send(204).end();
-	};
-
-	controller.salvaContato = function(req, res) {
-
-		var contato = req.body;
-
-		contato = contato._id ? atualiza(contato) : adiciona(contato);
-
-		res.json(contato);
-	};
-
-	function adiciona(contatoNovo) {
-		contatoNovo._id = ++ID_CONTATO_INC;
-		contatos.push(contatoNovo);
-		return contatoNovo;
-	}
-
-	function atualiza(contatoAlterar) {
-		contatos = contatos.map(function(contato) {
-			if (contato._id == contatoAlterar._id) {
-				contato = contatoAlterar;
-			}
-			return contato;
-		});
-		return contatoAlterar;
-	}
+	controller.salvaContato = function(req, res) {};
 
 	return controller;
 };
