@@ -1,6 +1,9 @@
 // config/database.js
 var mongoose = require('mongoose');
 
+// Debug no console para todas as consultas.
+mongoose.set('debug',true);
+
 module.exports = function(uri) {
     // Para trabalhar com mais de um banco/conexão, use a função createConnection.
     mongoose.connect(uri);
