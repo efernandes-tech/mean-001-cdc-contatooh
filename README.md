@@ -3,12 +3,12 @@
 ##### Passos Para Inicializar:
 
 1 - Instalar o node.
-2 - Instalar o MongoDB, entao executar comandos no prompt:
+2 - Instalar o MongoDB, e executar os comandos no prompt:
     md \data\db
     "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
 2 - Acessar a pasta do projeto com o prompt.
 3 - Executar "npm update".
-4 - Executar "bower update".
+4 - Executar "bower update" (arquivos salvos em "public/vendor").
 5 - Instalar e executar o NodeMon "npm install nodemon -g" e "nodemon server.js" (atenção as permissões de adm da maquina).
 6 - Se não rodar o NodeMon, use o "node server".
 7 - Acesse a url: "http:\\localhost:3000".
@@ -23,6 +23,12 @@
 ##### Correção de Bugs:
 
 - https://stackoverflow.com/questions/28651028/cannot-find-module-build-release-bson-code-module-not-found-js-bson
+	- Find in npm module mongodb:
+		..\node_modules\mongodb\node_modules\bson\ext\index.js
+	- Change path to js version in catch block:
+		bson = require('../build/Release/bson');
+	- To:
+		bson = require('../browser_build/bson');
 
 ##### Anotacoes Livro:
 
@@ -290,7 +296,7 @@ adicionando o bootstrap em nossas paginas
 	- E uma forma de saber de qual collection um ID pertence para poder implementar as consultas de busca
 7.1 mongo driver
     - Instalar o drive para conexao do express com o mongodb
-        npm install mongodb@1.4 --save
+        npm install mongodb@2.2 --save
 7.2 esquema faz falta?
 	- O esquema fica por conta da aplicação, a integridade do dado é responsabilidade do programador.
 7.3 mongoose object-document modeler
