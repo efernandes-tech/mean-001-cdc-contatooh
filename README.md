@@ -312,5 +312,15 @@ adicionando o bootstrap em nossas paginas
 	- Utilizamos o segundo pois as funcoes de percistencia do primeiro não retornam promises.
 8 autenticacao com passport
 	- Para não ter que desenvolver um servidor de autenticação e tmb armazenar senhas, vc pode usar serviços de autenticação com o do Facebook.
+8.1 oauth 2.0
+	- O fluxo do protocolo:
+		1 - usuário tenta acessa a aplicação.
+		2 - usuário é redirecionado página de login do github (leva o CLIENT_ID).
+			- por baixo dos panos a aplicação envia o CLIENT_ID.
+		3 - usuário se loga, é redirecionado devolta para a aplicação.
+			- por baixo dos panoas a aplicação recebe o cód. de autenticação.
+8.2 registrando no provedor de autenticacao
+	- Geralmente é criado um usuario especifico no github para a aplicação.
+	- Então é registrada a aplicação para gerar o client id e o client secret.
 
-pg 199 - cap 8
+pg 203 - cap 8 - topico 8.3
