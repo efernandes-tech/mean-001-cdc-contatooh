@@ -329,7 +329,10 @@ adicionando o bootstrap em nossas paginas
 		npm install passport@0.2 --save
 	- Configurar o uso de sessões para o express:
 		npm install express-session@1.7 cookie-parser@1.3 --save
-
+8.4 estragégia de autenticação
+	- Existem varies e vc pode criar as suas.
+	- Usando autenticacao com o github:
+		npm install passport-github@0.1 --save
 
 
 
