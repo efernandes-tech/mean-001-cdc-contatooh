@@ -29,6 +29,8 @@
 		bson = require('../build/Release/bson');
 	- To:
 		bson = require('../browser_build/bson');
+- http://thecodeinside.com/trocando-usuario-e-email-em-commits-do-git
+	git filter-branch --env-filter "GIT_AUTHOR_NAME='edersonlrf'; GIT_AUTHOR_EMAIL='edersonluis.rf@gmail.com';" HEAD
 
 ##### Anotacoes Livro:
 
@@ -322,5 +324,14 @@ adicionando o bootstrap em nossas paginas
 8.2 registrando no provedor de autenticacao
 	- Geralmente é criado um usuario especifico no github para a aplicação.
 	- Então é registrada a aplicação para gerar o client id e o client secret.
+8.3 oauth 2.0 com passport
+	- Instalando a biblioteca:
+		npm install passport@0.2 --save
+	- Configurar o uso de sessões para o express:
+		npm install express-session@1.7 cookie-parser@1.3 --save
+
+
+
+
 
 pg 203 - cap 8 - topico 8.3
