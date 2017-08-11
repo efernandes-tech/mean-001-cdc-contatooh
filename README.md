@@ -336,7 +336,8 @@ adicionando o bootstrap em nossas paginas
 8.6 mongoose e plugins
 	- Instalando o plugin do findOrCreate para o mongoose.
 		npm install mongoose-findorcreate@0.1 --save
-
+8.7 serializacao e desserializacao do usuario
+	- Serializa-se apenas o ObjectId para não onerar o servidor.
 
 
 pg 208 - cap 8 - topico 8.6
