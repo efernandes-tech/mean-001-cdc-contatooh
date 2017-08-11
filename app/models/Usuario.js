@@ -2,6 +2,9 @@
 
 var mongoose = require('mongoose');
 
+// importando o plugin
+var findOrCreate = require('mongoose-findorcreate');
+
 module.exports = function() {
     var schema = mongoose.Schema({
         login: {
@@ -20,6 +23,9 @@ module.exports = function() {
             default: Date.now
         }
     });
+
+    // associando plugin ao nosso esquema
+    schema.plugin(findOrCreate);
 
     return mongoose.model('Usuario', schema);
 };

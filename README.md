@@ -330,11 +330,13 @@ adicionando o bootstrap em nossas paginas
 	- Configurar o uso de sessões para o express:
 		npm install express-session@1.7 cookie-parser@1.3 --save
 8.4 estragégia de autenticação
-	- Existem varies e vc pode criar as suas.
+	- Existem varias formas de autenticar ou vc pode criar as suas.
 	- Usando autenticacao com o github:
 		npm install passport-github@0.1 --save
+8.6 mongoose e plugins
+	- Instalando o plugin do findOrCreate para o mongoose.
+		npm install mongoose-findorcreate@0.1 --save
 
 
 
-
-pg 203 - cap 8 - topico 8.3
+pg 208 - cap 8 - topico 8.6
