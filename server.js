@@ -4,9 +4,8 @@
 var http = require('http');
 var express = require('express');
 // Modulo criado com as configuracoes.
-var app = express();
+var app = require('./config/express')();
 // Inicializando a conexão.
-require('./config/express')(app);
 require('./config/passport')();
 require('./config/database')('mongodb://localhost/contatooh');
 
