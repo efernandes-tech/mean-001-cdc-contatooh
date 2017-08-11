@@ -19,15 +19,6 @@ module.exports = function() {
 	// Quando chamado retorna uma instancia do modulo armazenado.
 	var app = express();
 
-	app.use(cookieParser());
-	app.use(session({
-		secret: 'jessi gorda',
-		resave: true,
-		saveUninitialized: true
-	}));
-	app.use(passport.initialize());
-	app.use(passport.session());
-
 	// Define variavel de ambiente (chave, valor).
 	app.set('port', 3000);
 
@@ -45,6 +36,15 @@ module.exports = function() {
 	app.set('view engine', 'ejs');
 	// Define o diretorio que contera as views.
 	app.set('views', './app/views');
+
+	app.use(cookieParser());
+	app.use(session({
+		secret: 'jessi gorda',
+		resave: true,
+		saveUninitialized: true
+	}));
+	app.use(passport.initialize());
+	app.use(passport.session());
 
 	// Inicia o modulo com as rotas (DEPRECATED - Agora usando 'express-load').
 	// home(app);
