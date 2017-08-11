@@ -53,6 +53,7 @@ module.exports = function() {
 	// O 'cwd' foi necessario pois por padrao os diretorios sao procurados na raiz.
 	load('models', {cwd: 'app'})
 		.then('controllers')
+		.then('routes/auth.js')
 		.then('routes')
 		.into(app);
 
