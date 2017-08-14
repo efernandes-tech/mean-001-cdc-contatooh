@@ -340,4 +340,4 @@ adicionando o bootstrap em nossas paginas
 	- Serializa-se apenas o ObjectId para não onerar o servidor.
 
 
-pg 217 - cap 8 - topico 8.9
+pg 218 - cap 8 - topico 8.10
