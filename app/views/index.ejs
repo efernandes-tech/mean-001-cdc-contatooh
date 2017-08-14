@@ -9,6 +9,13 @@
 	<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
 </head>
 <body class="container">
+	<div class="text-right">
+		<p>
+			Logado como: <span id="usuario-logado">
+				<%=usuarioLogado %>
+			<span>
+		</p>
+	</div>
 	<div ng-view></div>
 	<script src="vendor/angular/angular.js"></script>
 	<!-- Importando os plugins do angular. -->

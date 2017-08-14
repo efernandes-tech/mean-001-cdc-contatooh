@@ -9,7 +9,6 @@ var express = require('express');
 // Carrega o modulo que carrega as dependencias.
 var load = require('express-load');
 var bodyParser = require('body-parser');
-
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
@@ -22,6 +21,13 @@ module.exports = function() {
 	// Define variavel de ambiente (chave, valor).
 	app.set('port', 3000);
 
+	// Configuracao do template.
+
+	// Define o 'ejs' como template utilizado.
+	app.set('view engine', 'ejs');
+	// Define o diretorio que contera as views.
+	app.set('views', './app/views');
+
 	// Middlewares.
 	app.use(express.static('./public'));
 
@@ -29,13 +35,6 @@ module.exports = function() {
 	app.use(bodyParser.urlencoded({extended: true}));
 	app.use(bodyParser.json());
 	app.use(require('method-override')());
-
-	// Configuracao do template.
-
-	// Define o 'ejs' como template utilizado.
-	app.set('view engine', 'ejs');
-	// Define o diretorio que contera as views.
-	app.set('views', './app/views');
 
 	app.use(cookieParser());
 	app.use(session({
@@ -58,4 +57,4 @@ module.exports = function() {
 		.into(app);
 
 	return app;
-}
+};
