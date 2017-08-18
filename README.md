@@ -339,5 +339,4 @@ adicionando o bootstrap em nossas paginas
 8.7 serializacao e desserializacao do usuario
 	- Serializa-se apenas o ObjectId para não onerar o servidor.
 
-
 pg 218 - cap 8 - topico 8.10

@@ -1,5 +1,7 @@
 // app/routes/contato.js
 
+var verificaAutenticacao = require('../../config/auth');
+
 module.exports = function(app) {
 
 	// Carrega o controller.
@@ -9,13 +11,13 @@ module.exports = function(app) {
 	// app.get('/contatos', controller.listaContatos);
 	// app.post('/contatos', controller.salvaContato);
 	app.route('/contatos')
-		.get(controller.listaContatos)
-		.post(controller.salvaContato);
+		.get(verificaAutenticacao, controller.listaContatos)
+		.post(verificaAutenticacao, controller.salvaContato);
 
 	// Registra rota usando um curinga.
 	// app.get('/contatos/:id', controller.obtemContato);
 	// app.delete('/contatos/:id', controller.removeContato);
 	app.route('/contatos/:id')
-		.get(controller.obtemContato)
-		.delete(controller.removeContato);
+		.get(verificaAutenticacao, controller.obtemContato)
+		.delete(verificaAutenticacao, controller.removeContato);
 };
