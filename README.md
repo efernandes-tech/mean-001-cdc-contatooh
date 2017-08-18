@@ -338,5 +338,6 @@ adicionando o bootstrap em nossas paginas
 		npm install mongoose-findorcreate@0.1 --save
 8.7 serializacao e desserializacao do usuario
 	- Serializa-se apenas o ObjectId para não onerar o servidor.
+9.1 helmet: middlewares de segurança
 
-pg 218 - cap 8 - topico 8.10
+pg 224 - cap 9 - topico 9.1
