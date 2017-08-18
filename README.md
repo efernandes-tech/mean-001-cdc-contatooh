@@ -1,9 +1,8 @@
 # mean-001-cdc-contatooh
 
 ##### Passos Para Inicializar:
-
+``
 1 - Instalar o node.
-
 2 - Instalar o MongoDB, e executar os comandos no prompt:
     md \data\db
     "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
@@ -13,7 +12,7 @@
 5 - Instalar e executar o NodeMon "npm install nodemon -g" e "nodemon server.js" (atenção as permissões de adm da maquina).
 6 - Se não rodar o NodeMon, use o "node server".
 7 - Acesse a url: "http:\\localhost:3000".
-
+``
 ##### MongoDB:
 
 - Comando para inicializar:
