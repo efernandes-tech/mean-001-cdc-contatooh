@@ -2,7 +2,7 @@
 
 ##### Passos Para Inicializar:
 
-1 - Instalar o node.
+    1 - Instalar o node.
 2 - Instalar o MongoDB, e executar os comandos no prompt:
     md \data\db
     "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
