@@ -1,5 +1,7 @@
 # mean-001-cdc-contatooh
 
+Gerenciador de contatos usando uma stack MEAN.
+
 ##### Passos Para Inicializar:
 
     1 - Instalar o node.
