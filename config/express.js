@@ -1,4 +1,5 @@
 // config/express.js
+var helmet = require('helmet');
 
 // O require() carrega o modulo (armazenando uma funcao).
 var express = require('express');
@@ -44,6 +45,8 @@ module.exports = function() {
 	}));
 	app.use(passport.initialize());
 	app.use(passport.session());
+
+	app.use(helmet());
 
 	// Inicia o modulo com as rotas (DEPRECATED - Agora usando 'express-load').
 	// home(app);

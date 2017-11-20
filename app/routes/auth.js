@@ -3,6 +3,12 @@
 var passport = require('passport');
 
 module.exports = function(app) {
+
+    app.get('/logout', function(req, res) {
+        req.logOut(); // Exposto pelo passport.
+        res.redirect('/');
+    });
+
     app.get('/auth/github',
         passport.authenticate('github'));
     app.get('/auth/github/callback',
@@ -19,10 +25,5 @@ module.exports = function(app) {
             // renderiza auth.ejs
             res.render("auth");
         }
-    });
-
-    app.get('/logout', function(req, res) {
-        req.logOut(); // Exposto pelo passport.
-        res.redirect('/');
     });
 }
