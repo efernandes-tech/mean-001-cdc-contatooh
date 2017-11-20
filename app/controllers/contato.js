@@ -52,11 +52,18 @@ module.exports = function(app) {
 	controller.salvaContato = function(req, res) {
 		var _id = req.body._id;
 
-		// Testando por undefined.
-		req.body.emergencia = req.body.emergencia || null;
+		/*
+		Independente da quantidade de parâmetros,
+		apenas selecionamos o nome, email e emergencia:
+		*/
+		var dados = {
+			"nome" : req.body.nome,
+			"email" : req.body.email,
+			"emergencia" : req.body.emergencia || null // Testando por undefined.
+		};
 
 		if(_id) { // Editar.
-			Contato.findByIdAndUpdate(_id, req.body).exec()
+			Contato.findByIdAndUpdate(_id, dados).exec()
 				.then(
 					function(contato) {
 						res.json(contato);
@@ -67,7 +74,7 @@ module.exports = function(app) {
 					}
 				);
 		} else { // Cadastra.
-			Contato.create(req.body)
+			Contato.create(dados)
 				.then(
 					function(contato) {
 						res.status(201).json(contato);
