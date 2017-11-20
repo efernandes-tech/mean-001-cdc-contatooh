@@ -1,6 +1,6 @@
 // config/passport.js
 
-// autenticação 
+// Autenticação .
 var passport = require('passport');
 var GitHubStrategy = require('passport-github').Strategy;
 
@@ -45,5 +45,4 @@ module.exports = function() {
                 done(null, usuario);
             });
     });
-
 };

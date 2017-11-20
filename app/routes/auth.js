@@ -16,6 +16,7 @@ module.exports = function(app) {
             successRedirect: '/'
         }));
 
+/*
     // Verificando autenticação do usuário.
     app.get('/', function(req, res, next) {
         if(req.isAuthenticated()) {
@@ -26,4 +27,5 @@ module.exports = function(app) {
             res.render("auth");
         }
     });
+*/
 }

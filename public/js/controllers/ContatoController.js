@@ -6,20 +6,27 @@ angular.module('contatooh').controller('ContatoController', function($scope, $ro
 		// Aqui continua no plura, e a rota no lado do servidor.
 		// var Contato = $resource('/contatos/:id');
 
+		Contato.query(function(contatos) {
+    		console.log("Chamou lista de contatos");
+			$scope.contatos = contatos;
+		});
+
 		if ($routeParams.contatoId) {
-			Contato.get(
-				{id: $routeParams.contatoId},
+    		console.log('Passou parâmetro ' + $routeParams.contatoId);
+			Contato.get({id: $routeParams.contatoId},
 				function(contato) {
+    				console.log("Achou contato: " + contato);
 					$scope.contato = contato;
 				},
 				function(erro) {
+					console.log(erro);
 					$scope.mensagem = {
 						texto: 'Não foi possível obter o contato.'
 					};
-					console.log(erro);
 				}
 			);
 		} else {
+    		console.log("Cria novo contato");
 			$scope.contato = new Contato();
 		}
 
@@ -35,8 +42,4 @@ angular.module('contatooh').controller('ContatoController', function($scope, $ro
 					console.log(erro);
 				});
 		};
-
-		Contato.query(function(contatos) {
-			$scope.contatos = contatos;
-		});
 });

@@ -1,5 +1,4 @@
 // config/express.js
-var helmet = require('helmet');
 
 // O require() carrega o modulo (armazenando uma funcao).
 var express = require('express');
@@ -13,6 +12,8 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
+// https://github.com/evilpacket/helmet
+var helmet = require('helmet');
 
 // Objeto disponivel implicitamente em cada modulo.
 module.exports = function() {
@@ -39,7 +40,7 @@ module.exports = function() {
 
 	app.use(cookieParser());
 	app.use(session({
-		secret: 'jessi gorda',
+		secret: 'Jessi',
 		resave: true,
 		saveUninitialized: true
 	}));
@@ -53,6 +54,8 @@ module.exports = function() {
 	app.use(helmet.xssFilter());
 
 	app.use(helmet.nosniff());
+
+	// app.use(helmet.ienoopen());
 
 	app.disable('x-powered-by');
 	// ou.

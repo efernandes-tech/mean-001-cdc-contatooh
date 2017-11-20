@@ -24,7 +24,7 @@ module.exports = function() {
         }
     });
 
-    // associando plugin ao nosso esquema
+    // Associando plugin ao nosso esquema.
     schema.plugin(findOrCreate);
 
     return mongoose.model('Usuario', schema);

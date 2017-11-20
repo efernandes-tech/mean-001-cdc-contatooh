@@ -1,6 +1,14 @@
 // app/routes/contato.js
 
-var verificaAutenticacao = require('../../config/auth');
+// var verificaAutenticacao = require('../../config/auth');
+
+function verificaAutenticacao(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    } else {
+        res.status('401').json('Não autorizado');
+    }
+}
 
 module.exports = function(app) {
 

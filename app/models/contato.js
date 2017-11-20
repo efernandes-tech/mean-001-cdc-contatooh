@@ -21,5 +21,18 @@ module.exports = function() {
         }
     });
 
+/*
+    schema.pre('save', function(next) {
+        console.log('chamou callback');
+        var hoje = Date.now;
+        this.alteracao = hoje;
+        if(!this.inclusao) {
+            this.inclusao = hoje;
+        }
+        console.log(this);
+        next();
+    });
+*/
+
     return mongoose.model('Contato', schema);
 };
