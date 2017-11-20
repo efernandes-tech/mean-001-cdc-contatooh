@@ -48,15 +48,15 @@ module.exports = function() {
 
 	app.use(helmet());
 
-	// app.disable('x-powered-by');
-	// ou.
-	app.use(helmet.hidePoweredBy({ setTo: 'PHP 5.5.14' }));
-
 	app.use(helmet.xframe());
 
 	app.use(helmet.xssFilter());
 
 	app.use(helmet.nosniff());
+
+	app.disable('x-powered-by');
+	// ou.
+	// app.use(helmet.hidePoweredBy({ setTo: 'PHP 5.5.14' }));
 
 	// Inicia o modulo com as rotas (DEPRECATED - Agora usando 'express-load').
 	// home(app);
