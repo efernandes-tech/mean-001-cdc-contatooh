@@ -47,6 +47,8 @@ module.exports = function() {
 	app.use(passport.session());
 
 	app.use(helmet());
+	app.disable('x-powered-by');
+	app.use(helmet.hidePoweredBy({ setTo: 'PHP 5.5.14' }));
 
 	// Inicia o modulo com as rotas (DEPRECATED - Agora usando 'express-load').
 	// home(app);
