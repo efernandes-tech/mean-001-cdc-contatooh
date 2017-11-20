@@ -56,6 +56,8 @@ module.exports = function() {
 
 	app.use(helmet.xssFilter());
 
+	app.use(helmet.nosniff());
+
 	// Inicia o modulo com as rotas (DEPRECATED - Agora usando 'express-load').
 	// home(app);
 
