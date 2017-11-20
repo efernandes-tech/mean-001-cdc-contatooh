@@ -13,10 +13,10 @@ module.exports = function(app) {
         passport.authenticate('github'));
     app.get('/auth/github/callback',
         passport.authenticate('github', {
-            successRedirect: '/'
+            successRedirect: '/',
+            failureRedirect: '/login'
         }));
 
-/*
     // Verificando autenticação do usuário.
     app.get('/', function(req, res, next) {
         if(req.isAuthenticated()) {
@@ -27,5 +27,4 @@ module.exports = function(app) {
             res.render("auth");
         }
     });
-*/
 }
