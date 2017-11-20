@@ -17,6 +17,7 @@
     "express-session": "^1.15.6",
     "helmet": "^0.4.2",
     "method-override": "^2.3.10",
+    "mongo-sanitize": "^1.0.0",
     "mongodb": "^2.2.33",
     "mongoose": "^3.8.40",
     "mongoose-findorcreate": "^0.1.2",

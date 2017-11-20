@@ -340,7 +340,9 @@ adicionando o bootstrap em nossas paginas
 	- Serializa-se apenas o ObjectId para não onerar o servidor.
 9.1 helmet: middlewares de segurança
 	npm install helmet@0.4 --save
+9.2 mongodb/api rest: evitando query selector injection
+	npm install mongo-sanitize@1.0 --save
+
 
 
 pg 224 - cap 9 - topico 9.1
-
