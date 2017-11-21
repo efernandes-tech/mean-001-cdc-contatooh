@@ -347,6 +347,11 @@ adicionando o bootstrap em nossas paginas
 	npm install -g grunt-cli@0.1
 10.3 instalando nosso primeiro plugin
 	npm install grunt-contrib-copy@0.7 --save-dev
+10.5 targets
+	grunt copy
+	grunt copy:aplicacaoInteira
+10.6 atalho para tarefas
+	npm install grunt-contrib-clean@0.6 --save-dev
 
 
 
