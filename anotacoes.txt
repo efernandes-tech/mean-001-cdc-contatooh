@@ -342,6 +342,11 @@ adicionando o bootstrap em nossas paginas
 	npm install helmet@0.4 --save
 9.2 mongodb/api rest: evitando query selector injection
 	npm install mongo-sanitize@1.0 --save
+10.1 bem-vindo ao grunt
+	npm install grunt@0.4 --save-dev
+	npm install -g grunt-cli@0.1
+10.3 instalando nosso primeiro plugin
+	npm install grunt-contrib-copy@0.7 --save-dev
 
 
 
