@@ -357,6 +357,9 @@ adicionando o bootstrap em nossas paginas
 	npm install grunt-usemin@2.6 --save-dev
 10.10 angular e minificacao
 	npm install grunt-ng-annotate@0.5 --save-dev
+11.1 Karma: feedback instantâneo de testes de unidade
+	npm install karma@0.12 --save-dev
+	npm install -g karma-cli@0.1
 
 
 
