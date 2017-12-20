@@ -369,3 +369,17 @@ adicionando o bootstrap em nossas paginas
 
 
 PG 255 - Capítulo 11 Testando a aplicação
+
+
+
+https://github.com/socketio/socket.io/issues/1577
+
+
+[
+    'websocket', 
+    'flashsocket', 
+    'htmlfile', 
+    'xhr-polling', 
+    'jsonp-polling', 
+    'polling'
+  ]
