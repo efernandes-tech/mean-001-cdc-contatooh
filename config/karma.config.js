@@ -14,7 +14,16 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: ['../test/spec/*Spec.js'],
+    files: [
+        '../public/vendor/angular/angular.js',
+        '../public/vendor/angular-mocks/angular-mocks.js',
+        '../public/vendor/angular-resource/angular-resource.js',
+        '../public/vendor/angular-route/angular-route.js',
+        '../public/js/main.js',
+        '../public/js/controllers/**/*.js',
+        '../public/js/services/**/*.js',
+        '../test/spec/**/*Spec.js'
+    ],
 
 
     // list of files to exclude

@@ -2,10 +2,22 @@
 
 describe("ContatoController", function() {
 
-    it("Deve criar um Contato vazio quando"
-        + "nenhum parâmetro de rota for passado", function() {
+    var $scope;
 
-        expect($scope.contato._id).toBeUndefined();
+    beforeEach(function() {
+        module('contatooh');
+        inject(function($injector) {
+            $scope = $injector.get('$rootScope').$new();
+        });
     });
+
+    it("Deve criar um Contato vazio quando"
+        + "nenhum parâmetro de rota for passado",
+    inject(function($controller) {
+        $controller('ContatoController', {
+            "$scope" : $scope
+        });
+        expect($scope.contato._id).toBeUndefined();
+    }));
 
 });
