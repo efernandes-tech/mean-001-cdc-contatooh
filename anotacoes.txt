@@ -366,6 +366,9 @@ adicionando o bootstrap em nossas paginas
 	karma start config/karma.config.js
 11.5 angular-mocks e integracao com jasmine
 	bower install angular-mocks#1.3 --save-dev
+11.8 protractor: testes end-to-end com angularjs
+	npm install -g protractor@1.5
+	webdriver-manager update
 
 
 
