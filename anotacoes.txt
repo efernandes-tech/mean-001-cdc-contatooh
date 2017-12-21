@@ -369,7 +369,9 @@ adicionando o bootstrap em nossas paginas
 11.8 protractor: testes end-to-end com angularjs
 	npm install -g protractor@1.5
 	webdriver-manager update
+	- Subir o Selenium Server:
+		webdriver-manager start
 
 
 
-PG 255 - Capítulo 11 Testando a aplicação
+11.9 - PG 276
