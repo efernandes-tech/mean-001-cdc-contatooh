@@ -6,14 +6,25 @@
 2 - Instalar o MongoDB, e executar os comandos no prompt:
     md \data\db
     "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
-2 - Acessar a pasta do projeto com o prompt.
-3 - Executar "npm update".
-4 - Executar "bower update" (arquivos salvos em "public/vendor").
-5 - Executar "grunt".
-6 - Acessar a pasta "dist".
-7 - Instalar e executar o NodeMon "npm install nodemon -g" e "nodemon server.js" (atenção as permissões de adm da maquina).
-8 - Se não rodar o NodeMon, use o "node server".
-9 - Acesse a url: "http:\\localhost:3000".
+3 - Instalações globais: (atenção as permissões de adm da maquina)
+	npm install -g nodemon
+	npm install -g bower
+	npm install -g grunt-cli
+	npm install -g karma-cli
+	npm install -g protractor
+4 - Acessar a pasta do projeto com o prompt.
+5 - Executar "npm install".
+6 - Executar "bower install" (arquivos salvos em "public/vendor").
+7 - Executar "grunt".
+8 - Acessar a pasta "dist".
+9 - Executar o NodeMon "nodemon server.js".
+10 - Se não rodar o NodeMon, use o "node server".
+11 - Acesse a url: "http:\\localhost:3000".
+12 - Subir serviços:
+	mongod
+	karma config/karma.config.js
+	webdriver-manager start
+	protractor config/protractor.js
 
 ##### MongoDB:
 
@@ -87,7 +98,7 @@
 2.8 criando controllers
 	- Controller criado em "app/controller/home.js".
 	- Usando o "NODEMON" vc não precisa reiniciar o servidor a cada alteração ('-g' instala globalmente):
-		npm install nodemon -g
+		npm install -g nodemon
 		nodemon server.js
 2.9 carregando dependencias com express-load
 	- Com o aumento no numero de arquivos, controlar as dependecias com "require()" se torna complexo, por isso o ideal é usar o "Express-Load". Para instalar:
@@ -371,6 +382,8 @@ adicionando o bootstrap em nossas paginas
 	webdriver-manager update
 	- Subir o Selenium Server:
 		webdriver-manager start
+	- Acessar:
+		http://localhost:4444/wd/hub
 
 
 
