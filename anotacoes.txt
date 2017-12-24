@@ -2,7 +2,7 @@
 
 ##### Passos Para Inicializar:
 
-1 - Instalar o node.
+1 - Instalar o NodeJS com o NPM.
 2 - Instalar o MongoDB, e executar os comandos no prompt:
     md \data\db
     "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
@@ -12,9 +12,10 @@
 	npm install -g grunt-cli
 	npm install -g karma-cli
 	npm install -g protractor
+	webdriver-manager start
 4 - Acessar a pasta do projeto com o prompt.
 5 - Executar "npm install".
-6 - Executar "bower install" (arquivos salvos em "public/vendor").
+6 - Executar "bower install". (arquivos salvos em "public/vendor")
 7 - Executar "grunt".
 8 - Acessar a pasta "dist".
 9 - Executar o NodeMon "nodemon server.js".
@@ -23,7 +24,6 @@
 12 - Subir serviços:
 	mongod
 	karma config/karma.config.js
-	webdriver-manager start
 	protractor config/protractor.js
 
 ##### MongoDB:
@@ -384,6 +384,8 @@ adicionando o bootstrap em nossas paginas
 		webdriver-manager start
 	- Acessar:
 		http://localhost:4444/wd/hub
+12.2 configurando .travis.yml
+	npm install karma-phantomjs-launcher@0.1 --save-dev
 
 
 

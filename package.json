@@ -37,6 +37,7 @@
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^0.1.4",
     "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
     "mongodb": "^1.4.19"
   }
 }
