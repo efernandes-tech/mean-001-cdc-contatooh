@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "test": "karma start --single-run --browsers PhantomJS | protractor config/protractor.js"
+    "test": "karma start config/karma.config.js --single-run --browsers PhantomJS | protractor config/protractor.js"
   },
   "author": "Ederson Fernandes <edersonluis.rf@gmail.com>",
   "license": "ISC",
