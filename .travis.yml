@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 0.10
+- "4"
 notifications:
   email: false
 before_install:
@@ -14,4 +14,4 @@ before_script:
 - grunt
 - cd dist
 script:
-- ./node_modules/.bin/karma start config/karma.config.js --single-run --browsers PhantomJS
+- karma start config/karma.config.js --single-run --browsers PhantomJS
