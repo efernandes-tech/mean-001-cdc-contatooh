@@ -15,4 +15,5 @@ before_script:
 - cd dist
 script:
 - cd ..
-- karma start ../config/karma.config.js --single-run --browsers PhantomJS
+- karma start config/karma.config.js --single-run --browsers PhantomJS
+- cd dist
