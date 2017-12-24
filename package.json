@@ -34,9 +34,10 @@
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-ng-annotate": "^0.4.0",
     "grunt-usemin": "^2.4.0",
-    "karma": "~12.0",
-    "karma-chrome-launcher": "^0.1.4",
-    "karma-jasmine": "^0.1.5",
+    "jasmine-core": "^2.8.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-jasmine": "^0.1.6",
     "karma-phantomjs-launcher": "^0.1.4",
     "mongodb": "^1.4.19"
   }
