@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/edersonlrf/mean-001-cdc-contatooh.svg?branch=master)](https://travis-ci.org/edersonlrf/mean-001-cdc-contatooh)
+
 # mean-001-cdc-contatooh
 
 Gerenciador de contatos usando uma stack MEAN.
