@@ -6,12 +6,18 @@ angular.module('meusComponentes', [])
 
     directive.restrict = "EA";
 
+    directive.scope = {
+        titulo: '@'
+    };
+
+    directive.transclude = true;
+
     directive.template =
     '<div class="panel panel-default">' +
         '<div class="panel-heading">' +
             '<h3 class="panel-title">{{titulo}}</h3>' +
         '</div>' +
-        '<div class="panel-body">' +
+        '<div ng-transclude class="panel-body">' +
         '</div>' +
     '</div>';
 

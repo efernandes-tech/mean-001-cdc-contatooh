@@ -22,31 +22,36 @@
 <p class="text-info" ng-hide="contatos.length">
 	Não há contatos cadastrados.
 </p>
-<div class="table table-responsive">
-	<!-- A classe "table-hover" destaca linhas, com o mouse. -->
-	<table class="table table-hover">
-		<tr>
-			<th>NOME</th>
-			<th>E-MAIL</th>
-			<th>EMERGÊNCIA</th>
-			<th class="text-center">AÇÃO</th>
-		</tr>
-		<!-- O "contatos" é a lista que esta sendo percorrida. -->
-		<tr ng-repeat="contato in contatos | filter: filtro">
-			<td>
-				<a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
-			</td>
-			<td>
-				{{contato.email}}
-			</td>
-			<td>
-				{{contato.emergencia.nome}}
-			</td>
-			<td class="text-center">
-				<button ng-click="remove(contato)" class="btn btn-warning">
-					Remover
-				</button>
-			</td>
-		</tr>
-	</table>
-</div>
+
+<meu-painel titulo="Listagem de contatos">
+
+	<div class="table table-responsive">
+		<!-- A classe "table-hover" destaca linhas, com o mouse. -->
+		<table class="table table-hover">
+			<tr>
+				<th>NOME</th>
+				<th>E-MAIL</th>
+				<th>EMERGÊNCIA</th>
+				<th class="text-center">AÇÃO</th>
+			</tr>
+			<!-- O "contatos" é a lista que esta sendo percorrida. -->
+			<tr ng-repeat="contato in contatos | filter: filtro">
+				<td>
+					<a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
+				</td>
+				<td>
+					{{contato.email}}
+				</td>
+				<td>
+					{{contato.emergencia.nome}}
+				</td>
+				<td class="text-center">
+					<button ng-click="remove(contato)" class="btn btn-warning">
+						Remover
+					</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+</meu-painel>
