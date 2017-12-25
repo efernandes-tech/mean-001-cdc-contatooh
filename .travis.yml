@@ -20,8 +20,8 @@ before_install:
 before_script:
 - node test/data.js
 - grunt
+- cd dist
 - node server &
-- sleep 10
 script:
 - karma start config/karma.config.js --single-run --browsers PhantomJS
 - protractor config/protractor.js
