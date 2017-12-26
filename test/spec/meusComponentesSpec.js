@@ -62,4 +62,9 @@ describe('meuPainel', function() {
             $scope.$digest();
         });
     });
+
+    it('Deve criar um painel', function() {
+		expect(element.find('h3').text()).toContain('Principal');
+		expect(element.find('p').text()).toContain('Oi');
+	});
 });

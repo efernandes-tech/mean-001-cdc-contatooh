@@ -21,9 +21,9 @@ module.exports = function(config) {
     'public/js/main.js',
     'public/js/controllers/**/*.js',
     'public/js/services/**/*.js',
-    'public/js/directives/**/*.js',
     'test/spec/**/*Spec.js',
-    'public/js/directives/meus-componentes/*.html'
+    'public/js/directives/meus-componentes/*.html',
+    'public/js/directives/**/*.js'
     ],
 
     // list of files to exclude

@@ -39,7 +39,7 @@ angular.module('meusComponentes', [])
     directive.restrict = 'A';
 
     directive.scope = {
-        focus: '@'
+        evento: '@'
     };
 
     directive.link = function(scope, element) {
