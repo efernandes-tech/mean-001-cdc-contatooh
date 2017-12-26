@@ -5,54 +5,30 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../mean-001-cdc-contatooh',
+    basePath: '..',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-
     // list of files / patterns to load in the browser
     files: [
-        '../public/vendor/angular/angular.js',
-        '../public/vendor/angular-mocks/angular-mocks.js',
-        '../public/vendor/angular-resource/angular-resource.js',
-        '../public/vendor/angular-route/angular-route.js',
-        '../public/js/main.js',
-        '../public/js/controllers/**/*.js',
-        '../public/js/services/**/*.js',
-        '../public/js/directives/**/*.js',
-        '../test/spec/**/*Spec.js',
-        '../public/js/directives/meus-componentes/*.html'
+    'public/vendor/angular/angular.js',
+    'public/vendor/angular-mocks/angular-mocks.js',
+    'public/vendor/angular-resource/angular-resource.js',
+    'public/vendor/angular-route/angular-route.js',
+    'public/js/main.js',
+    'public/js/controllers/**/*.js',
+    'public/js/services/**/*.js',
+    'public/js/directives/**/*.js',
+    'test/spec/**/*Spec.js',
+    'public/js/directives/meus-componentes/*.html'
     ],
-
 
     // list of files to exclude
     exclude: [
     ],
-
-
-    plugins : [
-        'karma-ng-html2js-preprocessor',
-        'karma-chrome-launcher',
-        'karma-phantomjs-launcher',
-        'karma-jasmine'
-    ],
-
-
-    ngHtml2JsPreprocessor: {
-        moduleName: 'templates',
-        stripPrefix: '.*/public/'
-    },
-
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors : {
-        '../public/js/directives/**/*.html': 'ng-html2js'
-    },
-
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -60,6 +36,21 @@ module.exports = function(config) {
     reporters: ['progress'],
 
 
+    preprocessors : {
+        'public/js/directives/**/*.html': 'ng-html2js'
+    },
+
+    plugins : [
+        'karma-chrome-launcher',
+        'karma-ng-html2js-preprocessor',
+        'karma-phantomjs-launcher',
+        'karma-jasmine'
+    ],
+
+    ngHtml2JsPreprocessor: {
+        moduleName: 'templates',
+        stripPrefix: '.*public/'
+    },
     // web server port
     port: 9876,
 
@@ -70,7 +61,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
 
 
     // enable / disable watching file and executing tests whenever any file changes
@@ -85,5 +76,6 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false
-  })
-}
+
+  });
+};
