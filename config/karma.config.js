@@ -23,7 +23,8 @@ module.exports = function(config) {
         '../public/js/controllers/**/*.js',
         '../public/js/services/**/*.js',
         '../public/js/directives/**/*.js',
-        '../test/spec/**/*Spec.js'
+        '../test/spec/**/*Spec.js',
+        '../public/js/directives/meus-componentes/*.html'
     ],
 
 
@@ -32,9 +33,24 @@ module.exports = function(config) {
     ],
 
 
+    plugins : [
+        'karma-ng-html2js-preprocessor',
+        'karma-chrome-launcher',
+        'karma-phantomjs-launcher',
+        'karma-jasmine'
+    ],
+
+
+    ngHtml2JsPreprocessor: {
+        moduleName: 'templates',
+        stripPrefix: '.*/public/'
+    },
+
+
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
+    preprocessors : {
+        '../public/js/directives/**/*.html': 'ng-html2js'
     },
 
 

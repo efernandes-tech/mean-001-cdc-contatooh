@@ -386,7 +386,8 @@ adicionando o bootstrap em nossas paginas
 		http://localhost:4444/wd/hub
 12.2 configurando .travis.yml
 	npm install karma-phantomjs-launcher@0.1 --save-dev
+13.10 lidando com templateurl em testes
+	npm install karma-ng-html2js-preprocessor@0.1 --save-dev
 
 
-
-11.9 - PG 276
+cap 14 - PG 351
