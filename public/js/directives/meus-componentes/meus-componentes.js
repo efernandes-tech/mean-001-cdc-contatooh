@@ -32,4 +32,24 @@ angular.module('meusComponentes', [])
     + '</buttom>';
 
     return directive;
+})
+.directive('meuFocus', function() {
+    var directive = {};
+
+    directive.restrict = 'A';
+
+    directive.scope = {
+        focus: '='
+    };
+
+    directive.link = function(scope, element) {
+        scope.$watch('focus', function() {
+            if (scope.focus) {
+                element[0].focus();
+                scope.focus = false;
+            }
+        });
+    };
+
+    return directive;
 });
