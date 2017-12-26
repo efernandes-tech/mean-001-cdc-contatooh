@@ -388,6 +388,7 @@ adicionando o bootstrap em nossas paginas
 	npm install karma-phantomjs-launcher@0.1 --save-dev
 13.10 lidando com templateurl em testes
 	npm install karma-ng-html2js-preprocessor@0.1 --save-dev
-
+14.15 integrando travis com openshift
+	npm uninstall grunt-contrib-copy grunt-contrib-clean
 
 cap 14 - PG 351
