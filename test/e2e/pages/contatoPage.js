@@ -21,7 +21,7 @@ var contatoPage = function() {
         return element(by.binding('mensagem.texto')).getText()
     };
 
-    this.selecionarPrimeiraEmergenciaDaLista = function() {
+    this.selecionarEmergenciaDaLista = function() {
         element(by.css('option[value="0"]')).click();
     };
 }

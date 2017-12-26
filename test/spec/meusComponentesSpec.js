@@ -4,7 +4,7 @@ describe('meuBotaoAviso', function() {
 
     beforeEach(function() {
         module('meusComponentes');
-        inject(function($rootScope, $compile) {
+        inject(function($compile, $rootScope) {
             $scope = $rootScope.$new();
             element = angular.element(
                 '<meu-botao-aviso nome="Remover" acao="remove()">'
@@ -27,7 +27,7 @@ describe('meuFocus', function() {
 
     beforeEach(function() {
         module('meusComponentes');
-        inject(function($rootScope, $compile) {
+        inject(function($compile, $rootScope) {
             $scope = $rootScope.$new();
             element = angular.element(
                 '<button meu-focus evento="' + evento + '">Voltar</button>'

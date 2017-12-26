@@ -11,21 +11,20 @@
 	{{mensagem.texto}}
 </p>
 <!-- Diretiva para o evento de click. -->
-<a ng-href="#/contato" class="btn btn-primary">
+<a id="btnNovo" href="#/contato" class="btn btn-primary">
 	Novo Contato
 </a>
 <input ng-model="filtro" type="search" placeholder="parte do nome">
+<p class="text-info" ng-hide="contatos.length">
+	Não há contatos cadastrados.
+</p>
 <!-- <p>Contatos cadastrados: {{total}}</p> -->
 <p ng-show="contatos.length">
 	Contatos cadastrados: {{contatos.length}}
 </p>
-<p class="text-info" ng-hide="contatos.length">
-	Não há contatos cadastrados.
-</p>
 
-<meu-painel titulo="Listagem de contatos">
-
-	<div class="table table-responsive">
+<meu-painel titulo="Listagem de Contatos">
+	<div class="table-responsive">
 		<!-- A classe "table-hover" destaca linhas, com o mouse. -->
 		<table class="table table-hover">
 			<tr>
@@ -51,5 +50,4 @@
 			</tr>
 		</table>
 	</div>
-
 </meu-painel>

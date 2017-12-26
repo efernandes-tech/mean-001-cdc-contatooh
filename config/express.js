@@ -47,7 +47,7 @@ module.exports = function() {
 	app.use(passport.initialize());
 	app.use(passport.session());
 
-	app.use(helmet());
+	// app.use(helmet());
 
 	app.use(helmet.xframe());
 
@@ -55,7 +55,7 @@ module.exports = function() {
 
 	app.use(helmet.nosniff());
 
-	// app.use(helmet.ienoopen());
+	app.use(helmet.ienoopen());
 
 	app.disable('x-powered-by');
 	// ou.
