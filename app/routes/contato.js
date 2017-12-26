@@ -16,10 +16,10 @@ module.exports = function(app) {
 	var controller = app.controllers.contato;
 
 	// Registra rota.
-	// app.get('/contatos', controller.listaContatos);
+	// app.get('/contatos', controller.listaTodos);
 	// app.post('/contatos', controller.salvaContato);
 	app.route('/contatos')
-		.get(verificaAutenticacao, controller.listaContatos)
+		.get(verificaAutenticacao, controller.listaTodos)
 		.post(verificaAutenticacao, controller.salvaContato);
 
 	// Registra rota usando um curinga.

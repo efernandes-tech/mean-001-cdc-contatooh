@@ -1,6 +1,6 @@
 // public/js/controllers/ContatoController.js
 
-angular.module('contatooh').controller('ContatoController', function($scope, $routeParams, Contato) {
+angular.module('contatooh').controller('ContatoController', function($scope, $routeParams, Contato, $rootScope) {
 		// console.log($routeParams.contatoId);
 
 		// Aqui continua no plura, e a rota no lado do servidor.

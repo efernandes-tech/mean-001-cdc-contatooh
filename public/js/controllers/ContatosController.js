@@ -1,7 +1,7 @@
 // public/js/controllers/ContatosController.js
 
 // Criando o controller passando as dependencias.
-angular.module('contatooh').controller('ContatosController', function($scope, Contato) {
+angular.module('contatooh').controller('ContatosController', function(Contato, $scope) {
 	// Iniciando as propriedades que serao utilizadas pela view.
 	$scope.contatos = [];
 	$scope.filtro = '';
@@ -27,12 +27,12 @@ angular.module('contatooh').controller('ContatosController', function($scope, Co
 	}
 
 	// Definindo o que e executado na inicializacao do controller.
-	$scope.init = function() {
+	// $scope.init = function() {
 		buscaContatos();
 		// ...
-	};
+	// };
 
-	$scope.init();
+	// $scope.init();
 
 	$scope.remove = function(contato) {
 		Contato.delete(

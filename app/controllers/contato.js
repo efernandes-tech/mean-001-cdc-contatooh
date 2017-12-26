@@ -7,7 +7,7 @@ module.exports = function(app) {
 
 	var controller = {};
 
-	controller.listaContatos = function(req, res) {
+	controller.listaTodos = function(req, res) {
 		// Usa a funcao "find" herdada do obj do mongoose.
 		var promise = Contato.find().populate('emergencia').exec();
 		promise.then(

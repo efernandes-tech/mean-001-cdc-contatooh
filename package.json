@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start --single-run --browsers PhantomJS | protractor config/protractor.js"
   },
   "author": "Ederson Fernandes <edersonluis.rf@gmail.com>",
   "license": "ISC",
@@ -32,12 +32,12 @@
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-ng-annotate": "^0.4.0",
     "grunt-usemin": "^2.4.0",
-    "jasmine-core": "^2.8.0",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^0.1.12",
     "karma-jasmine": "^0.1.6",
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "karma-phantomjs-launcher": "^0.1.4",
-    "mongodb": "^1.4.19"
+    "mongodb": "^1.4.19",
+    "jasmine-core": "^2.8.0"
   }
 }

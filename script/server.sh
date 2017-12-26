@@ -3,4 +3,4 @@ export SELENIUM_USER=shounenbr@gmail.com
 export SELENIUM_USER_PASSWORD=qwerty123
 export CLIENT_ID=2fa80f62ff589451fe17
 export CLIENT_SECRET=b94536b97d938fff3c83f2ae0a2d3900e1812483
-node server
+nodemon server.js

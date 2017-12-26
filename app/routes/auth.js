@@ -13,12 +13,12 @@ module.exports = function(app) {
         passport.authenticate('github'));
     app.get('/auth/github/callback',
         passport.authenticate('github', {
-            successRedirect: '/',
-            failureRedirect: '/login'
+            successRedirect: '/'
+            // , failureRedirect: '/login'
         }));
 
     // Verificando autenticação do usuário.
-    app.get('/', function(req, res, next) {
+    /*app.get('/', function(req, res, next) {
         if(req.isAuthenticated()) {
             // permite que outras rotas sejam processadas
             return next();
@@ -26,5 +26,5 @@ module.exports = function(app) {
             // renderiza auth.ejs
             res.render("auth");
         }
-    });
+    });*/
 }
