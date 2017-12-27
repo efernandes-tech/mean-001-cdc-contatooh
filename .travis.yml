@@ -24,7 +24,7 @@ before_script:
 - sleep 10
 script:
 - karma start config/karma.config.js --single-run --browsers PhantomJS
-- protractor config/protractor.js
+- cd "protractor config/protractor.js"
 before_deploy:
 - git config --global user.email 'travis@travis-ci.com'
 - git config --global user.name 'Travis CI'
