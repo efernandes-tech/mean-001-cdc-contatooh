@@ -2,7 +2,7 @@
 
 module.exports = {
     env: 'test',
-    db: 'mongodb://127.0.0.1:27017/contatooh_test',
+    db: 'mongodb://localhost/contatooh_test',
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     sauceTestName: 'Contatooh E2E Testing',
