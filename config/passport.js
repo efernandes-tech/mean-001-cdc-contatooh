@@ -5,10 +5,7 @@ var passport = require('passport');
 var GitHubStrategy = require('passport-github').Strategy;
 var mongoose = require('mongoose');
 var config = require('./config')();
-<<<<<<< HEAD
 
-=======
->>>>>>> 8fa9d1b23fd6c79d0823561153302240744c1e1e
 module.exports = function() {
     // Declarando uma variável para nos ajudar.
     var githubCallback = 'http://' + config.domain + '/auth/github/callback';
