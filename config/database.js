@@ -2,11 +2,11 @@
 var mongoose = require('mongoose');
 
 // Debug no console para todas as consultas.
-mongoose.set('debug',true);
+// mongoose.set('debug',true);
 
 module.exports = function(uri) {
     // Para trabalhar com mais de um banco/conexão, use a função createConnection.
-    mongoose.connect(uri, { useMongoClient: true, poolSize: 15 });
+    mongoose.connect(uri, { server: { poolSize: 15 }});
     // Apresenta o status da conexão.
     mongoose.connection.on('connected', function() {
         console.log('Mongoose! Conectado em ' + uri);
