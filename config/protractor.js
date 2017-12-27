@@ -12,7 +12,8 @@ exports.config = {
         'build': config.travisBuild
     },
 
-    specs: ['../test/e2e/**/*Spec.js'],
+    // specs: ['../test/e2e/**/*Spec.js'],
+    specs: ['../test/*.js'],
     onPrepare: function() {
         browser.driver.get('http://localhost:3000').then(function(){
             browser.driver.findElement(by.id('entrar')).click();
