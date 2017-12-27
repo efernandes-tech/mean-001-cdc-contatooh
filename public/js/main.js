@@ -31,13 +31,4 @@ angular.module('contatooh', ['ngRoute', 'ngResource', 'meusComponentes'])
 	// Redireciona caso a rota acessada não exista.
 	$routeProvider.otherwise({redirectTo: '/contatos'});
 
-}).run(function ($rootScope, $location) { //Insert in the function definition the dependencies you need.
-    //Do your $on in here, like this:
-    $rootScope.$on("$routeChangeStart",function(event, next, current){
-        //Do your things
-        if(next.templateUrl) {
-            ga('send', 'pageview', { page: next.templateUrl });
-          __insp.push([next.templateUrl]);
-        }
-    });
 });
