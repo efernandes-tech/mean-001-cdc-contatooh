@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- "4"
+- '4'
 notifications:
   email: false
 services:
@@ -35,8 +35,8 @@ deploy:
   provider: openshift
   user: edersonluis.rf@gmail.com
   password:
-    secure: Cdh8iU6vQYZber/wouTvUQdHiSSJimHUaTgGgMRz5PHYbl5fhZGx3k5qaN2cGnk59TE5IlJ/fkMDLc7lDEKmY+IsJCWcCAmNd1TBCAiNewvUzZ0czYC1suWV0TEG+K77m57z+KJ4QLXjaVXsEU/yeSvE7uh0lPxptbeRzKmrDJdohZA6b0/Iw2VxLSgAclj7yfv9/3vwmAKB6Yrl6CgKzvZTkh1LuPZNmCNh12xoqcGiiWZeLcCBaSpZDdobEkjhqg04XGy3XXJlv12fkbt1l+XOKhnCpvu3q47Q6lECa0ogNmFKy2gmdr+wUC+gqGgN+q6WJwKi2NLa9rgfH7yKll2CHbY+BhC7IWJnABrorR4eQCHrBJs5dSZZMuUu2QY1xNLXgmeNCc0h9iM9832PGrsiT03LGDwf5MFQmnczeBSaenrLvvM2FzfCIfWqDKFS6qSOLdg4ZItFXyxqmzNAd7cLx3zzisPwRPYkHT5+ByfLBlZX2gpzlYCp6/kaJgysfnSRaKW/HKmCMWJj11eTLx+ZOl+V90mCS1NkmBya2LFqoC0n+Zj1K6ccpqzZlTcfkkXk83MkJw/qJ/1jHEAxkHHGDwwxlX8QMg0jaHDjX0vLXLw/hZMicmq5SHPbMr/bLyNUun0w2QrISf77FZy29sRW1e9x0x3VzMRPn4mw19w=
+    secure: BhCiHY+bSbZFoXbXr8+h1ujhvNBM+f/Tlc9r8lo/fevrfmMhWU9PCw6cWgTF/EASGEGbczglbU2X3wzxZoHaYXQ+zMOXFP/rFfNw+PoBJOdYtiWG0zQ/JQ3wcKAnSJmjUexxwANbvjBOzJjrOmqN6zilcUNnKYmqA8G3mnWEs/xNORCxDnUtGpf4gyZmk+CnN+nauobP6XoGWnHr+UpmSkWP/sW8oNkUAIp+wqUkxW7OXOMQGCaEokSWiaBG8lsjW9XfbjppiVSl2dboZlDnopGMWCfJ/pdNgubqux2NhQ7ML07BmZM2WTZA830XuagNl2CYfrssOdQnMukdCdGEFyPvJC1Lumn6kBtL74JwfvXXLslti29gsyYe5XUvqO1YavWYuKEb4WFnepSrWzlscVZjDTZN4LCxMmwHW+0li/vMrL9HgDBjLKQ3b27L4RX68CPI5+JJ4YwKpctnQibxnxTRv/Gpt3E6+o48cW69Z4bEAU9iEB3nH8qT9547AQP3r571OFDJ6d2zcFwHx/T0sWJeTDLxqZrTRgU+aOXZcUAtyQcOZ1qWw2pDmpjsFkCU+p+4c3VExUzXZxscjhm0YDTfT7X1XmPpYO2H8PS3lpK91cF/LqiH7d4kxzr6qNmcoWQkIVIdhyCmyN8GfqSD5gP6lC16946ALLW0/Fhc7DA=
   app: contatooh
-  domain: edersonlrf
+  domain: http://contatooh-mean-001-cdc-contatooh.1d35.starter-us-east-1.openshiftapps.com/
   on:
     repo: edersonlrf/mean-001-cdc-contatooh
