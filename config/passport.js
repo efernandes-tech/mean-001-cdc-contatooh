@@ -1,16 +1,14 @@
 // config/passport.js
 
-var config = require('./config')();
-
 // Autenticação .
 var passport = require('passport');
 var GitHubStrategy = require('passport-github').Strategy;
-
 var mongoose = require('mongoose');
+var config = require('./config')();
 
 module.exports = function() {
-    // declarando uma variável para nos ajudar
-    var githubCallback = 'http://' + config.domain + ':' + config.port + '/auth/github/callback';
+    // Declarando uma variável para nos ajudar.
+    var githubCallback = 'http://' + config.domain + '/auth/github/callback';
 
     var Usuario = mongoose.model('Usuario');
 
