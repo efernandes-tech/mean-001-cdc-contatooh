@@ -37,6 +37,6 @@ deploy:
   password:
     secure: MhCnN7SsYpS6f4TB1O2oZt2hwJwAzA0C3HOOrhXqgnJtdaP3vgtL2aqASJnQd2J6avg+adiwGXoi9guxH30URh/+ncOU4B1uLcFg+YqZ6fw4FyJXYJEqyK8xmSOtAM9OybeU9yBQ7WLvQfgF2RT+hr+N+V4KA2s1vGEE31hlfdycuWvhbpx+ibpPc+ex7sZB5XvrXh7j/1KGwvTl3sUr6wBwFxjlaAjfmJ8fpOC6AiYV6fJWJTeSDAtdfVF9YYtdXL/tKBx0aPG61wISe//AqrvhQfIVrRe9Klem0pOjsfT24OCMv1bJ6mNWJNeILAH80xg77Dk54YG5K6vP3bb6MLggdpf1QlLHlMh3bcuDrOrhTShjH+u+YTEJzmzWsWmZchidVYwWipkmV6+W5YrAlf/p5e3/wp2nCydT3yxlA5R0Ow7Vnu6iVbnKN8V+xQUabhUhVdA5kEvZkF5VQk9JfcSgc+o47u/lj5Tcdjm7jOaDgYxIeGvXUO7kBq3cxFPosnnBpS6szJgXoE7u5ZN9f3TrZLDDq2cjMH7Mq6mQlFLMDh6TJ2X2f4q6ZSH40TvSRQII4jvPtdeJKr4yA61/0r0V2yoBPFQyNzdvsodg8obZJufhFWDlp+dpz6Bj2yCKhTYl7OljqlKTjAfK3+JlCOdcXjhW1dzxS+OpGZD3OIs=
   app: nodejs-mongo-persistent
-  domain: http://nodejs-mongo-persistent-contatooh.1d35.starter-us-east-1.openshiftapps.com/
+  domain: https://api.starter-us-east-1.openshift.com/oapi/v1/namespaces/contatooh/buildconfigs/nodejs-mongo-persistent/webhooks/4QvSXTEPQru2Ng2IihmAaCnsKMSMnjiCUYA6hgEt/generic
   on:
     repo: edersonlrf/mean-001-cdc-contatooh
