@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "test": "karma start --single-run --browsers PhantomJS | protractor config/protractor.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ederson Fernandes <edersonluis.rf@gmail.com>",
   "license": "ISC",
