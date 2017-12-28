@@ -1,7 +1,7 @@
 angular.module('contatooh')
-	.factory('meuInterceptor',
-	function($location, $q) {
-
+	.factory('meuInterceptor', 
+	function($location, $q) {  
+    
     var interceptor = {
     	responseError: function(resposta) {
     		if (resposta.status == 401) {

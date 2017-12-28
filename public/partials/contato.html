@@ -1,38 +1,39 @@
-<!-- public/partials/contato.html -->
-
-<h1 class="text-center">
-	Contato
-</h1>
+<h1 class="text-center">Contato</h1>
 <p id="alerta" ng-show="mensagem.texto">
-	{{mensagem.texto}}
+    {{mensagem.texto}}
 </p>
 <meu-painel titulo="Cadastro de Contatos">
-<form ng-submit="salva()">
-	<div class="form-group">
-		<label for="nome">Nome completo</label>
-		<input type="text" class="form-control" id="nome" name="nome" required ng-model="contato.nome">
-	</div>
-	<div class="form-group">
-		<label for="email">Email</label>
-		<div class="input-group">
-			<span class="input-group-addon">@</span>
-			<input type="email" class="form-control" id="email" name="email" placeholder="email@exemplo.com" required ng-model="contato.email">
+	<form ng-submit="salva()">
+		<div class="form-group">
+			<label for="nome">Nome completo</label>
+			<input type="text" class="form-control" id="nome" 
+			name="nome" required ng-model="contato.nome">
 		</div>
-	</div>
-	<div class="form-group">
-		<label for="emergencia">Emergência</label>
-		<select id="emergencia" class="form-control"
-			ng-model="contato.emergencia"
-			ng-options="contato._id as contato.nome for contato in contatos">
-		</select>
-	</div>
-	<div>
-		<button type="submit" class="btn btn-primary">
-			Salvar
-		</button>
-		<a id="botao-voltar" meu-focus evento="contatoSalvo" href="#/" class="btn btn-default">
-			Voltar
-		</a>
-	</div>
-</form>
+
+		<div class="form-group">
+			<label for="email">Email</label>
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+				<input type="email" class="form-control" id="email" 
+				placeholder="email@exemplo.com" name="email" 
+				ng-model="contato.email" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="emergencia">Emergencia</label>
+			<select id="emergencia" ng-model="contato.emergencia" ng-options="contato._id as contato.nome for contato in contatos"
+			class="form-control" >
+			</select>
+		</div>
+		<div>
+			<button type="submit" class="btn btn-primary">
+				Salvar
+			</button>
+
+			<a id="botao-voltar" meu-focus evento="contatoSalvo"
+	  			href="#/" class="btn btn-default">
+	   			 Voltar
+			</a>
+		</div>
+	</form>
 </meu-painel>

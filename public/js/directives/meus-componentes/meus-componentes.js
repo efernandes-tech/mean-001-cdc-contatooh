@@ -1,51 +1,51 @@
-// public/js/directives/meus-componentes/meus-componentes.js
-
 angular.module('meusComponentes', [])
 .directive('meuPainel', function() {
-    var directive = {};
 
-    directive.restrict = "EA";
+  var directive = {}
 
-    directive.scope = {
-        titulo: '@'
-    };
+  directive.restrict = 'EA';
 
-    directive.transclude = true;
+  directive.scope = {
+    titulo: '@'
+  };
 
-    directive.templateUrl = 'js/directives/meus-componentes/meu-painel.html';
+  directive.transclude = true;
 
-    return directive;
+  directive.templateUrl = 'js/directives/meus-componentes/meu-painel.html';
+
+  return directive;
 })
 .directive('meuBotaoAviso', function() {
+
     var directive = {}
 
     directive.restrict = 'E';
 
     directive.scope = {
-        nome : '@',
-        acao : '&'
+      nome : '@',
+      acao : '&'
     };
 
-    directive.template =
-    '<button ng-click="acao()" class="btn btn-warning">'
-        + '{{nome}}'
-    + '</buttom>';
-
+    directive.template = 
+      '<button ng-click="acao()" class="btn btn-warning">' + 
+    	'  {{nome}}' + 
+      '</buttom>';
+    
     return directive;
 })
 .directive('meuFocus', function() {
     var directive = {};
-
+    
     directive.restrict = 'A';
-
+    
     directive.scope = {
-        evento: '@'
+      evento: '@'
     };
 
     directive.link = function(scope, element) {
-        scope.$on(scope.evento, function() {
-            element[0].focus();
-        });
+      scope.$on(scope.evento, function() {
+        element[0].focus();
+      });
     };
 
     return directive;

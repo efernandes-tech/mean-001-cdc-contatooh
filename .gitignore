@@ -2,8 +2,7 @@
 .DS_Store
 .DS_Store?
 node_modules/
-public/vendor/
-dist/
-/////script/
-.vs
+/public/vendor
+/dist
+/scripts
 .dpl/
