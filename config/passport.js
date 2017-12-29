@@ -15,7 +15,7 @@ module.exports = function() {
     passport.use(new GitHubStrategy({
         clientID: config.clientID,
         clientSecret: config.clientSecret,
-        callbackURL: (process.env.NODE_ENV == 'production') ? 'http://mean-001-cdc-contatooh.herokuapp.com/auth/github/callback' : githubCallback
+        callbackURL: githubCallback
     }, function(accessToken, refreshToken, profile, done) {
         Usuario.findOrCreate(
             { "login" : profile.username},
