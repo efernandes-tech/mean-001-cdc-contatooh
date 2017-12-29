@@ -6,6 +6,6 @@ module.exports = {
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     port: process.env.PORT,
-    address: process.env.PORT,
-    domain: process.env.PORT
+    address: 'localhost',
+    domain: 'localhost:3000'
 };
