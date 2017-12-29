@@ -9,3 +9,5 @@ module.exports = {
     address: process.env.ADDRESS,
     domain: process.env.DOMAIN
 };
+
+console.log(process.env);
