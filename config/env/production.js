@@ -7,5 +7,5 @@ module.exports = {
     clientSecret: process.env.CLIENT_SECRET,
     port: process.env.PORT,
     address: 'mean-001-cdc-contatooh.herokuapp.com',
-    domain: ('mean-001-cdc-contatooh.herokuapp.com:' + process.env.PORT)
+    domain: 'mean-001-cdc-contatooh.herokuapp.com'
 };
