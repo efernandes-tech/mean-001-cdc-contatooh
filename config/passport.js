@@ -8,7 +8,7 @@ var config = require('./config')();
 
 module.exports = function() {
     // Declarando uma variável para nos ajudar.
-    var githubCallback = 'http://' + config.domain + '/auth/github/callback';
+    var githubCallback = 'http://' + config.domain + '/auth/github/callback2';
 
     var Usuario = mongoose.model('Usuario');
 
