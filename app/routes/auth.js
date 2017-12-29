@@ -13,7 +13,8 @@ module.exports = function(app) {
         passport.authenticate('github'));
     app.get('/auth/github/callback',
         passport.authenticate('github', {
-            successRedirect: '/'
+            successRedirect: '/',
+            failureRedirect: '/login'
         }));
 
     // Verificando autenticação do usuário.
