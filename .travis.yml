@@ -32,9 +32,8 @@ before_deploy:
 - git add --all
 - git commit -am "Travis commit"
 deploy:
-  provider: heroku
-  api_key:
-    secure: gpsUcK3SPpQ2AKBzVSy+5JgDKTgq4QsQKqSQxwMikRyYhbrFHLYmqfAxjHSerwi6GZtuSFuWbrYCKc7Gu6IMtOpc4VxxGfCtKhvPI7/JNO/aBiHVEhqLzHs1aKQifUTSFZ8BXY68mxXdk3dFhwLEBgAhZ275Rpfvh46JrYJPHJd2Gla3ZqkWWgVYNCQmq6vNRR9LsUwbUlGmhGZ3Mgb2u+IPbeR1+T+hL6ddbwKLIfbGDfnLa2Rg96rwGoHy0Bc+JaZgSz4F7hAPHHtO7ZHMVZGn45BuDrVChh79gSZMnXPARaIh28byhrFsG3NAbLqx5lEU2l0zThNFBD03qYiWztZac0Jx1HP3Au0K4ynQxXyDADUdwq8fGyPP/jundwEJTentYa9CvTeEpopt0+LKh91/bZLgDDRVVk6MdPCqsMCmiZD2OrTtP+ca/c8fnh7Tk9NZmvaFBGO5DEZfbLie183vyRxY1rwfXMXMENOG+kIrUyUfzdhPk2cXSTBbgC+Hky7D3KPfRrbniF0Zn78PdfLLMtGA+Hm7A+bnP8e5Ds9QHgOLAs6Lw18wnsWv15yw7ieXLVRhZS4kex4Fw6XTfrC1btQx8CMeKZyI+KMn8zPf4KSXIuYgTvYtxtiZ1lpVeHm/TV6DC2lkOqOSu6CMlMXDnd4z6Vf9bn8WG1Uwn1c=
-  app: mean-001-cdc-contatooh
+  provider: mongodb-atlas
+  user: edersonluis.rf@gmail.com
+  api_key: u4FjdwmCZQAXS9cXFXrmqqzSnjJaWlAq8HZtZhK1XGS6Bh7AqKpm1zZ4u8ZCUS52
   on:
     repo: edersonlrf/mean-001-cdc-contatooh
