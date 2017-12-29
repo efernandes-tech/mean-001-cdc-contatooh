@@ -32,8 +32,8 @@ before_deploy:
 - git add --all
 - git commit -am "Travis commit"
 deploy:
-  provider: mongodb-atlas
-  user: edersonluis.rf@gmail.com
-  api_key: u4FjdwmCZQAXS9cXFXrmqqzSnjJaWlAq8HZtZhK1XGS6Bh7AqKpm1zZ4u8ZCUS52
-  on:
-    repo: edersonlrf/mean-001-cdc-contatooh
+  provider: bitballoon
+  site-id:
+    secure: "20815df60f24b9cff755925ffb0e37555ea0184000be4527ce62aae01682999f"
+  access-token:
+    secure: "49cacdf9010d681c6ec41e03bf7a77589809cd2b73ad59b084b5d0bd0c87f0ea"
