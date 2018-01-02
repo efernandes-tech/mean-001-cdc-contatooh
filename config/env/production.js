@@ -2,7 +2,7 @@
 
 module.exports = {
     env: 'production',
-    db: process.env.MONGODB_URI + 'contatooh',
+    db: process.env.MONGODB_URI,
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     port: process.env.PORT,
