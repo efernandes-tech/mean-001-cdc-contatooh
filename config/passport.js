@@ -9,10 +9,7 @@ var mongoose = require('mongoose');
 
 module.exports = function() {
     // Declarando uma variável para nos ajudar.
-    if (process.env.NODE_ENV == 'production')
-        var githubCallback = 'http://' + config.domain + ':' + config.port + '/auth/github/callback';
-    else
-        var githubCallback = 'http://' + config.domain + '/auth/github/callback';
+    var githubCallback = 'http://' + config.domain + '/auth/github/callback';
 
     var Usuario = mongoose.model('Usuario');
 
