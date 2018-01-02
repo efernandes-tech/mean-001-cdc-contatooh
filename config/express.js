@@ -1,5 +1,7 @@
 // config/express.js
 
+var config = require('./config')();
+
 // O require() carrega o modulo (armazenando uma funcao).
 var express = require('express');
 
@@ -21,7 +23,7 @@ module.exports = function() {
 	var app = express();
 
 	// Define variavel de ambiente (chave, valor).
-	app.set('port', 3000);
+	app.set('port', config.port);
 
 	// Configuracao do template.
 
