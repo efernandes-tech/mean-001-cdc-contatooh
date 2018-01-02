@@ -2,32 +2,31 @@
 
 ##### Passos Para Inicializar:
 
-1 - Instalar o NodeJS com o NPM.
-2 - Instalar o MongoDB, e executar os comandos no prompt:
-    md \data\db
-    "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
+1 - Instalar o NodeJS e o NPM.
+2 - Instalar o MongoDB.
 3 - Instalações globais: (atenção as permissões de adm da maquina)
 	npm install -g nodemon
 	npm install -g bower
 	npm install -g grunt-cli
 	npm install -g karma-cli
 	npm install -g protractor
-	webdriver-manager start
+	webdriver-manager update
 4 - Acessar a pasta do projeto com o prompt.
 5 - Executar "npm install".
 6 - Executar "bower install". (arquivos salvos em "public/vendor")
-7 - Executar "grunt".
-8 - Acessar a pasta "dist".
-9 - Executar o NodeMon "nodemon server.js".
-10 - Se não rodar o NodeMon, use o "node server".
-11 - Acesse a url: "http:\\localhost:3000".
-12 - Subir serviços:
+7 - Executar o Node "sh script/server.sh".
+8 - Rodar os testes "sh script/test.sh".
+9 - Acesse a url: "http://localhost:3000".
+10 - Subir serviços:
 	mongod
-	karma config/karma.config.js
+	karma start config/karma.config.js
 	protractor config/protractor.js
 
 ##### MongoDB:
 
+- Instalação:
+    md \data\db
+    "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath d:\test\mongodb\data
 - Comando para inicializar:
 	"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"
 - Acessar em outro prompt (ele inicializado no primeiro):
@@ -390,5 +389,3 @@ adicionando o bootstrap em nossas paginas
 	npm install karma-ng-html2js-preprocessor@0.1 --save-dev
 14.15 integrando travis com openshift
 	npm uninstall grunt-contrib-copy grunt-contrib-clean
-
-cap 14 - PG 351
