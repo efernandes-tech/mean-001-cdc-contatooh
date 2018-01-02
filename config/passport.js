@@ -1,10 +1,11 @@
 // config/passport.js
 
+var config = require('./config')();
+
 // Autenticação .
 var passport = require('passport');
 var GitHubStrategy = require('passport-github').Strategy;
 var mongoose = require('mongoose');
-var config = require('./config')();
 
 module.exports = function() {
     // Declarando uma variável para nos ajudar.
